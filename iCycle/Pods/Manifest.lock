@@ -1,12 +1,15 @@
 PODS:
+  - CommonCrypto (1.1)
   - MySqlSwiftNative (1.0.10)
 
 DEPENDENCIES:
+  - CommonCrypto (~> 1.1)
   - MySqlSwiftNative (~> 1.0.6)
 
 SPEC CHECKSUMS:
+  CommonCrypto: e18c8416332cca5efe80c197f2a522d471c42626
   MySqlSwiftNative: 25d6d8c5db9d114a9b839aa5cb7de6d1f460f596
 
-PODFILE CHECKSUM: 92fde1d7345cb5a0fe51581be2d2a7a797072d00
+PODFILE CHECKSUM: 61c3142cf4c8e9a33a96b5111c47033c5c08fe5c
 
 COCOAPODS: 1.0.1

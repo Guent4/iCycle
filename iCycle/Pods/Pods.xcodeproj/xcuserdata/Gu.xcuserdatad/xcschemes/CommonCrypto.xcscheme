@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4CEA7DB166171396DF9A4048B390C899'
-               BlueprintName = 'Pods-iCycle'
+               BlueprintIdentifier = '879A1A43C506F994CADD25E16BD3404B'
+               BlueprintName = 'CommonCrypto'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-iCycle.framework'>
+               BuildableName = 'CommonCrypto.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
