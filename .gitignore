@@ -1,0 +1,9 @@
+iCycle/iCycle.xcodeproj/xcuserdata/deebanramalingam.xcuserdatad/
+iCycle/iCycle.xcodeproj/project.pbxproj
+.DS_Store
+**/.DS_Store
+*.xcuserstate
+**/iCycle.xcworkspace
+**/Podfile.lock
+**/Pods/
+
