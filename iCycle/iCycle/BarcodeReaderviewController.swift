@@ -151,9 +151,9 @@ class BarcodeReaderViewController: UIViewController, AVCaptureMetadataOutputObje
             
             if trimmedCodeString.hasPrefix("0") && trimmedCodeString.characters.count > 1 {
                 trimmedCodeNoZero = String(trimmedCodeString.characters.dropFirst())
-                DataService.register(trimmedCodeNoZero)
+                //DataService.register(trimmedCodeNoZero)
             } else {
-                DataService.register(trimmedCode)
+                //DataService.register(trimmedCode)
             }
             
             self.navigationController?.popViewControllerAnimated(true)

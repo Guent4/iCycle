@@ -1,0 +1,10 @@
+framework module MySqlSwiftNative {
+  umbrella header "MySqlSwiftNative-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MySqlSwiftNative.__Swift {
+    exclude header "MySqlSwiftNative-Swift.h"
+}
