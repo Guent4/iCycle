@@ -9,6 +9,7 @@
 import UIKit
 import MySqlSwiftNative
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tBar: UITabBar!
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     }
 
     func testDatabase() {
-        let con = MySQL.Connection();
+        let con = MySQL.Connection();	
         let db_name = "iCycle";
         
         do {
@@ -47,6 +48,15 @@ class ViewController: UIViewController {
             print(e)
         }
         
+    }
+    
+    func sha256(str : String) -> NSData {
+        let nsString = str as NSString
+        let data = nsString.dataUsingEncoding(NSUTF8StringEncoding)
+        var hash = [UInt8](count: Int(CC_SHA256_DIGEST_LENGTH), repeatedValue: 0)
+        CC_SHA256(data.bytes, CC_LONG(data.length), &hash)
+        let res = NSData(bytes: hash, length: Int(CC_SHA256_DIGEST_LENGTH))
+        return res
     }
 }
 

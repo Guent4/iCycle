@@ -2,10 +2,11 @@
 
 platform :ios, '9.0'
 workspace ‘iCycle’
+use_frameworks!
 
 target 'iCycle' do
-  use_frameworks!
 
   pod 'MySqlSwiftNative', '~> 1.0.6'
+  pod 'CommonCrypto', '~> 1.1'
 
 end
