@@ -7,3 +7,4 @@
 //
 
 #import "../Pods/CommonCrypto/NSData+CommonCrypto.h"
+#import "../Pods/MTBBarcodeScanner/Classes/ios/Scanners/MTBBarcodeScanner.h"

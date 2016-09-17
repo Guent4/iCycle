@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MTBBarcodeScanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MySqlSwiftNative.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4CEA7DB166171396DF9A4048B390C899</key>
+		<key>7B316FBECF845695A5C8D0669F8373E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>CCF23F1823862AA0CD0B5BEE7627D4F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2D0B4A7769E0B3F93661A82B30E1189</key>
 		<dict>
 			<key>primary</key>
 			<true/>

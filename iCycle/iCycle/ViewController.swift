@@ -8,7 +8,7 @@
 
 import UIKit
 import MySqlSwiftNative
-import CommonCrypto
+import MTBBarcodeScanner
 
 class ViewController: UIViewController {
     
@@ -47,16 +47,6 @@ class ViewController: UIViewController {
         catch (let e) {
             print(e)
         }
-        
-    }
-    
-    func sha256(str : String) -> NSData {
-        let nsString = str as NSString
-        let data = nsString.dataUsingEncoding(NSUTF8StringEncoding)
-        var hash = [UInt8](count: Int(CC_SHA256_DIGEST_LENGTH), repeatedValue: 0)
-        CC_SHA256(data.bytes, CC_LONG(data.length), &hash)
-        let res = NSData(bytes: hash, length: Int(CC_SHA256_DIGEST_LENGTH))
-        return res
     }
 }
 

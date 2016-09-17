@@ -7,92 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		002C17D288FDB9DB561DF91DD17FFFAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		1BF6710739B6341A2E188BF84044E3DE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B544673AC4C94F9AECBD144F0B71C /* Table.swift */; };
-		213CA9C9B81676F627463E788A22204D /* Pods-iCycle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA8DBC9829BFB8EBAFFE8EE86B1BC99 /* Pods-iCycle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C06AE55E90954E2E3D688DEA1E20B8B /* sha1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44281223E43FE0774264BDE8396BB374 /* sha1.swift */; };
-		552325152C0D4098BB06DE6B5A6D3CAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143400089EE3B9773473A2EE9A8B79D2 /* Constants.swift */; };
-		5B54EF1EB413DBF17D2590DD07088B6C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A84F58AA9541A06F711886752B7565 /* Result.swift */; };
-		64ACF8B416A81F6763F1FE5B1C84ED48 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B39FB5DAA3D7F7DCBA9A12EC47A8BC /* Socket.swift */; };
-		6DC688FC3D18BC921A96A26DE1B97945 /* Pods-iCycle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E224ED165FBEDEDE5D8A8B9914265093 /* Pods-iCycle-dummy.m */; };
-		6F2474A67EB8FB9C788D67907E2D634B /* Packets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208AC30EBF9FD559D40A92D6C2D13B9D /* Packets.swift */; };
-		7003D83F250AC5EAA69CC4923246B255 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		74EB33FE8A7DB71F3ADB67E500231239 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31186DA388DDE58A6EAB08B4581ECBF7 /* Statement.swift */; };
-		76FC7F57882BA00442FAD32BE553491C /* MySqlSwiftNative-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D00455DCF63AC758452DC4BED088EE15 /* MySqlSwiftNative-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		772C719284442372A80879E1F253DA47 /* tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643716CC937429A2C683DABCCFF2D31F /* tests.swift */; };
-		78B6A08076D319C7458CDC5A21EE26B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		79343F26E98C3E2492737383D76465BD /* CommonCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F2293254E7C825B0566A12DC1A40E92 /* CommonCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9089B2FE6A194D828BAFA65A05315F5A /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895E4512207BE7991572F9BD3028E09 /* Connection.swift */; };
-		94E389880BE503F6B604C6C44DEFE23E /* NSData+CommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EA4A179D2D44D7E59039999E57AE5E /* NSData+CommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A382E4733C1DD566D6A5DA175B5929EC /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D465464DD57D22B3EE2D4582F4ED35A /* NSData+CommonCrypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C2F6A68D4486D75E865B4A84BD4F75AF /* MySqlSwiftNative-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD02BC8D47DFF79DFB6371714E97EE /* MySqlSwiftNative-dummy.m */; };
-		C97BC46E81DE8D17A88E4B665F0727F1 /* mysql.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA7460FCA670AB4729C5F6CA7A074AB /* mysql.swift */; };
-		D10EC76A68890F9CC8BCEA1CC6B88F18 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB43C90FE7B54631BEEE7DAFF6C3D9 /* Utils.swift */; };
-		E2CF1763A9D75264B9EF1565D1B00F62 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5C82F6351D26B56A21CD8E651EDF3 /* main.swift */; };
-		F0B0D2B1016ECAB0E6D76F3DA5CE0078 /* CommonCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A0B6F18955A8695170EF6848DEE25D /* CommonCrypto-dummy.m */; };
-		F1239C46477C2FC8F8168AAD88C6ACFE /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF9C09173A31E8A342EA327B17A719 /* Query.swift */; };
+		002C17D288FDB9DB561DF91DD17FFFAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28744B5CB035AD82AE551647DC0B2B57 /* Foundation.framework */; };
+		003174EE636FF50A0C3330DF17EB5628 /* MTBBarcodeScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A22FED7F5B08BD8601BF7324E491D9F /* MTBBarcodeScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF6710739B6341A2E188BF84044E3DE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB3166A51618CF8264C21FB9C3A6F3 /* Table.swift */; };
+		2B389B2F71DEBC2634A0EF5B143065B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28744B5CB035AD82AE551647DC0B2B57 /* Foundation.framework */; };
+		2C03490AD568E65939AB0898A801EB62 /* MTBBarcodeScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C88C188A7C1E06D9525A278D5BFCABED /* MTBBarcodeScanner-dummy.m */; };
+		4C06AE55E90954E2E3D688DEA1E20B8B /* sha1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87097BB3124DFF8785774135EA4AE6 /* sha1.swift */; };
+		4EC13DB2A214A7343D8E77A456A23F0D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0004C5AF6EEABD638138247BBB588139 /* AVFoundation.framework */; };
+		552325152C0D4098BB06DE6B5A6D3CAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90B57480DEC4DB969AD63AA3DCE998 /* Constants.swift */; };
+		5B54EF1EB413DBF17D2590DD07088B6C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1006F80AE571EC0CEB260CBADF56E /* Result.swift */; };
+		63FCD4AB7816D0115094DF40395918C6 /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8EE38C94BA0B65A2CD0D9AC78622BC /* MTBBarcodeScanner.m */; };
+		64ACF8B416A81F6763F1FE5B1C84ED48 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782E6E4D032AC524AF6983AB4D148C9 /* Socket.swift */; };
+		663E9503081FEA0AB28A37B0AAB71D2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28744B5CB035AD82AE551647DC0B2B57 /* Foundation.framework */; };
+		6F2474A67EB8FB9C788D67907E2D634B /* Packets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E5B2CBE49FD458C9F3E15C02DC1B70 /* Packets.swift */; };
+		74EB33FE8A7DB71F3ADB67E500231239 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8800A69877233CD54EF27515FCDE5B /* Statement.swift */; };
+		76FC7F57882BA00442FAD32BE553491C /* MySqlSwiftNative-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F2AB93A42A49FDAA47FF180E384B2C /* MySqlSwiftNative-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		772C719284442372A80879E1F253DA47 /* tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D1942C7B9282109A9E767412A4CFE /* tests.swift */; };
+		78B6A08076D319C7458CDC5A21EE26B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28744B5CB035AD82AE551647DC0B2B57 /* Foundation.framework */; };
+		79343F26E98C3E2492737383D76465BD /* CommonCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F424F3FDA9437AAB2C176FE6C6836271 /* CommonCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9089B2FE6A194D828BAFA65A05315F5A /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95BD15E1A3A058730DAE7171AF06CB5 /* Connection.swift */; };
+		94E389880BE503F6B604C6C44DEFE23E /* NSData+CommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 32ED237ED2F351B2832519CA56AC3446 /* NSData+CommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A07BA0B167DB2088994356FFC6D9C0A7 /* Pods-iCycle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E224ED165FBEDEDE5D8A8B9914265093 /* Pods-iCycle-dummy.m */; };
+		A382E4733C1DD566D6A5DA175B5929EC /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB27AC2DEFFB6FA91F1E150E5923FE5 /* NSData+CommonCrypto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BDF344136165C00B112C303573CF396B /* MTBBarcodeScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8AB83E7B4452D00AD916EB768BEC7E /* MTBBarcodeScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2F6A68D4486D75E865B4A84BD4F75AF /* MySqlSwiftNative-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A08CDED474F8EF5C068597C8999580 /* MySqlSwiftNative-dummy.m */; };
+		C679F6EE1B6319AB7EE4518DB76BC8C3 /* Pods-iCycle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA8DBC9829BFB8EBAFFE8EE86B1BC99 /* Pods-iCycle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C97BC46E81DE8D17A88E4B665F0727F1 /* mysql.swift in Sources */ = {isa = PBXBuildFile; fileRef = B874DAB4C4B53E0E31127DDF2E0DD9ED /* mysql.swift */; };
+		D10EC76A68890F9CC8BCEA1CC6B88F18 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747018AEB804CCE71808A2232319678 /* Utils.swift */; };
+		E2CF1763A9D75264B9EF1565D1B00F62 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F49A251F911322AAAC6721A3CD631DC /* main.swift */; };
+		F0B0D2B1016ECAB0E6D76F3DA5CE0078 /* CommonCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30F6517C7A984BE5519446B60A14E6 /* CommonCrypto-dummy.m */; };
+		F1239C46477C2FC8F8168AAD88C6ACFE /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F4323C6F54A03F5C7D2A47EC47410 /* Query.swift */; };
+		FE4872EDE9A8EC4E6396508558A25247 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC63048FF590613A31A60C8712112716 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		08E0D60A3381C5A82956BE41111C1BE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 879A1A43C506F994CADD25E16BD3404B;
-			remoteInfo = CommonCrypto;
-		};
-		EE5BB64657B070B7CC01DA139F631E2F /* PBXContainerItemProxy */ = {
+		5E76F94561DE3B2309E92CA4193B7D4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CCF23F1823862AA0CD0B5BEE7627D4F8;
 			remoteInfo = MySqlSwiftNative;
 		};
+		800BCF94E2B536829B8E96AA72801166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B316FBECF845695A5C8D0669F8373E7;
+			remoteInfo = MTBBarcodeScanner;
+		};
+		A9C5FB0F3BBC8492F8345C3330F6F980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 879A1A43C506F994CADD25E16BD3404B;
+			remoteInfo = CommonCrypto;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03EA4A179D2D44D7E59039999E57AE5E /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
-		08B39FB5DAA3D7F7DCBA9A12EC47A8BC /* Socket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = Sources/MySqlSwiftNative/Socket.swift; sourceTree = "<group>"; };
-		0EEC60F7CB1FA4025206359A5C2B1EF6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		143400089EE3B9773473A2EE9A8B79D2 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/MySqlSwiftNative/Constants.swift; sourceTree = "<group>"; };
-		1DBB43C90FE7B54631BEEE7DAFF6C3D9 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/MySqlSwiftNative/Utils.swift; sourceTree = "<group>"; };
-		1EAEBE50C08AB58BA7228CD6CF8755ED /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		208AC30EBF9FD559D40A92D6C2D13B9D /* Packets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Packets.swift; path = Sources/MySqlSwiftNative/Packets.swift; sourceTree = "<group>"; };
-		24A84F58AA9541A06F711886752B7565 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/MySqlSwiftNative/Result.swift; sourceTree = "<group>"; };
-		31186DA388DDE58A6EAB08B4581ECBF7 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/MySqlSwiftNative/Statement.swift; sourceTree = "<group>"; };
-		34A0B6F18955A8695170EF6848DEE25D /* CommonCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CommonCrypto-dummy.m"; sourceTree = "<group>"; };
-		35DF9C09173A31E8A342EA327B17A719 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/MySqlSwiftNative/Query.swift; sourceTree = "<group>"; };
+		0004C5AF6EEABD638138247BBB588139 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		0B7A573DE63918D14490BB3064993F4A /* MySqlSwiftNative.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MySqlSwiftNative.xcconfig; sourceTree = "<group>"; };
+		1782E6E4D032AC524AF6983AB4D148C9 /* Socket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = Sources/MySqlSwiftNative/Socket.swift; sourceTree = "<group>"; };
+		1A5F4323C6F54A03F5C7D2A47EC47410 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/MySqlSwiftNative/Query.swift; sourceTree = "<group>"; };
+		24F9869B6813977E481FF46608202E71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28744B5CB035AD82AE551647DC0B2B57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2935787C9AB09379F85E602AE9F52D75 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
+		314CC3FC49526AED963D34D1E70B9784 /* MySqlSwiftNative-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MySqlSwiftNative-prefix.pch"; sourceTree = "<group>"; };
+		32ED237ED2F351B2832519CA56AC3446 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		3641735EB9236BA40941CA03444F97AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A1467EE98C71DCDD6D620B5F929B25E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE2849E00ABE5AEC906333BA20B10F8 /* Pods-iCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iCycle.release.xcconfig"; sourceTree = "<group>"; };
-		44281223E43FE0774264BDE8396BB374 /* sha1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = sha1.swift; path = Sources/MySqlSwiftNative/sha1.swift; sourceTree = "<group>"; };
-		47D6098B1789BB4231FBAE7C879FF666 /* MySqlSwiftNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MySqlSwiftNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		514B544673AC4C94F9AECBD144F0B71C /* Table.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Table.swift; path = Sources/MySqlSwiftNative/Table.swift; sourceTree = "<group>"; };
+		48F1006F80AE571EC0CEB260CBADF56E /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/MySqlSwiftNative/Result.swift; sourceTree = "<group>"; };
+		4E90B57480DEC4DB969AD63AA3DCE998 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/MySqlSwiftNative/Constants.swift; sourceTree = "<group>"; };
+		5322874DBD2FBABDBD03FF3AD6907D40 /* MySqlSwiftNative.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MySqlSwiftNative.modulemap; sourceTree = "<group>"; };
 		5D089FCC2F495A04450F9CECE342CC77 /* Pods-iCycle-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iCycle-acknowledgements.plist"; sourceTree = "<group>"; };
-		5D465464DD57D22B3EE2D4582F4ED35A /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
 		5E8B52659A82E155131CBEFC3645E33F /* Pods-iCycle-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iCycle-acknowledgements.markdown"; sourceTree = "<group>"; };
-		62FD02BC8D47DFF79DFB6371714E97EE /* MySqlSwiftNative-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MySqlSwiftNative-dummy.m"; sourceTree = "<group>"; };
-		643716CC937429A2C683DABCCFF2D31F /* tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = tests.swift; path = Sources/MySqlSwiftNative/tests.swift; sourceTree = "<group>"; };
-		6EB90B6BDD3CC79936EA8F8F66AE7F58 /* Pods_iCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76A3D520ABC872E9056398DBED5E6612 /* CommonCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCrypto-prefix.pch"; sourceTree = "<group>"; };
-		7895E4512207BE7991572F9BD3028E09 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/MySqlSwiftNative/Connection.swift; sourceTree = "<group>"; };
-		7F2293254E7C825B0566A12DC1A40E92 /* CommonCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCrypto-umbrella.h"; sourceTree = "<group>"; };
-		81C83A49ED007368AB5FB26DE8CC7978 /* MySqlSwiftNative.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MySqlSwiftNative.modulemap; sourceTree = "<group>"; };
+		60A08CDED474F8EF5C068597C8999580 /* MySqlSwiftNative-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MySqlSwiftNative-dummy.m"; sourceTree = "<group>"; };
+		6DA35C34BCA974A83BC93A7CEBDF002A /* MTBBarcodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MTBBarcodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F49A251F911322AAAC6721A3CD631DC /* main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/MySqlSwiftNative/main.swift; sourceTree = "<group>"; };
+		6F582BF58344325EA0D31C474D4B49CF /* MTBBarcodeScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTBBarcodeScanner-prefix.pch"; sourceTree = "<group>"; };
+		7A22FED7F5B08BD8601BF7324E491D9F /* MTBBarcodeScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTBBarcodeScanner.h; path = Classes/ios/Scanners/MTBBarcodeScanner.h; sourceTree = "<group>"; };
+		7EAE2CB8AF9396EDA92CE932A70AE98F /* Pods_iCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88E9B9D5869AD0BB714256FD8835AFC5 /* CommonCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCrypto-prefix.pch"; sourceTree = "<group>"; };
+		8B24EFE196EFC37E995842FA978ADA37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9474FCD7C6999BF11A1864C22AC809EB /* Pods-iCycle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iCycle.modulemap"; sourceTree = "<group>"; };
-		9A8B67445FB6D88A510FCEE4E262AB71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9747018AEB804CCE71808A2232319678 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/MySqlSwiftNative/Utils.swift; sourceTree = "<group>"; };
+		9A49CCA3434AAA42C54FCAA4C6E1C10E /* CommonCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CommonCrypto.modulemap; sourceTree = "<group>"; };
 		9BA8DBC9829BFB8EBAFFE8EE86B1BC99 /* Pods-iCycle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iCycle-umbrella.h"; sourceTree = "<group>"; };
-		AFA7460FCA670AB4729C5F6CA7A074AB /* mysql.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = mysql.swift; path = Sources/MySqlSwiftNative/mysql.swift; sourceTree = "<group>"; };
-		C5A5C82F6351D26B56A21CD8E651EDF3 /* main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/MySqlSwiftNative/main.swift; sourceTree = "<group>"; };
+		9CCFFC94357098AB0C51FD61ABDEF86C /* MTBBarcodeScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MTBBarcodeScanner.xcconfig; sourceTree = "<group>"; };
+		A1E5B2CBE49FD458C9F3E15C02DC1B70 /* Packets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Packets.swift; path = Sources/MySqlSwiftNative/Packets.swift; sourceTree = "<group>"; };
+		AF8800A69877233CD54EF27515FCDE5B /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/MySqlSwiftNative/Statement.swift; sourceTree = "<group>"; };
+		B874DAB4C4B53E0E31127DDF2E0DD9ED /* mysql.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = mysql.swift; path = Sources/MySqlSwiftNative/mysql.swift; sourceTree = "<group>"; };
+		BF8EE38C94BA0B65A2CD0D9AC78622BC /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTBBarcodeScanner.m; path = Classes/ios/Scanners/MTBBarcodeScanner.m; sourceTree = "<group>"; };
+		C88C188A7C1E06D9525A278D5BFCABED /* MTBBarcodeScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MTBBarcodeScanner-dummy.m"; sourceTree = "<group>"; };
+		C95BD15E1A3A058730DAE7171AF06CB5 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/MySqlSwiftNative/Connection.swift; sourceTree = "<group>"; };
 		CBC64CB1EBB2A948EC34F27134E189D3 /* Pods-iCycle-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iCycle-resources.sh"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D00455DCF63AC758452DC4BED088EE15 /* MySqlSwiftNative-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MySqlSwiftNative-umbrella.h"; sourceTree = "<group>"; };
-		DB705769F8A45D8BBBF121F6ED3BE01C /* CommonCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CommonCrypto.modulemap; sourceTree = "<group>"; };
+		CC1180F3514B2EE52F7B962D164B179B /* MTBBarcodeScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MTBBarcodeScanner.modulemap; sourceTree = "<group>"; };
+		CE87097BB3124DFF8785774135EA4AE6 /* sha1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = sha1.swift; path = Sources/MySqlSwiftNative/sha1.swift; sourceTree = "<group>"; };
+		D1F2AB93A42A49FDAA47FF180E384B2C /* MySqlSwiftNative-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MySqlSwiftNative-umbrella.h"; sourceTree = "<group>"; };
+		D81119E8D7601D1E1943E024CA1EFF36 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE30F6517C7A984BE5519446B60A14E6 /* CommonCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CommonCrypto-dummy.m"; sourceTree = "<group>"; };
 		E224ED165FBEDEDE5D8A8B9914265093 /* Pods-iCycle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iCycle-dummy.m"; sourceTree = "<group>"; };
+		E75777EEE1639EDCBEA8CE5C90147457 /* MySqlSwiftNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MySqlSwiftNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8447EA32D776B7755C247232EB45D5C /* Pods-iCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iCycle.debug.xcconfig"; sourceTree = "<group>"; };
 		EB740139521A0A075FFEDE907BF60F8F /* Pods-iCycle-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iCycle-frameworks.sh"; sourceTree = "<group>"; };
-		ED656E3DC6ACC0B0875470A8C7F026D1 /* MySqlSwiftNative.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MySqlSwiftNative.xcconfig; sourceTree = "<group>"; };
-		F371D52FCF8FDD33DFF86EEBC0712302 /* MySqlSwiftNative-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MySqlSwiftNative-prefix.pch"; sourceTree = "<group>"; };
-		F4205D93199FD2B4BDCAB9F574BA16B1 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
+		EC63048FF590613A31A60C8712112716 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		EEB27AC2DEFFB6FA91F1E150E5923FE5 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		F424F3FDA9437AAB2C176FE6C6836271 /* CommonCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonCrypto-umbrella.h"; sourceTree = "<group>"; };
+		F6DB3166A51618CF8264C21FB9C3A6F3 /* Table.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Table.swift; path = Sources/MySqlSwiftNative/Table.swift; sourceTree = "<group>"; };
+		FC4D1942C7B9282109A9E767412A4CFE /* tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = tests.swift; path = Sources/MySqlSwiftNative/tests.swift; sourceTree = "<group>"; };
+		FF8AB83E7B4452D00AD916EB768BEC7E /* MTBBarcodeScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTBBarcodeScanner-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +129,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B13E810EF93286931AA28BF2164D8817 /* Frameworks */ = {
+		C06C15F50523A1CA669DDB5FA780512B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7003D83F250AC5EAA69CC4923246B255 /* Foundation.framework in Frameworks */,
+				4EC13DB2A214A7343D8E77A456A23F0D /* AVFoundation.framework in Frameworks */,
+				663E9503081FEA0AB28A37B0AAB71D2A /* Foundation.framework in Frameworks */,
+				FE4872EDE9A8EC4E6396508558A25247 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,72 +147,91 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB4E1A1E2692CBE06CA498F4F2C34484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B389B2F71DEBC2634A0EF5B143065B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		39038846EFDA4C80406FD9177889A214 /* CommonCrypto */ = {
+		02DD8AE644330C07A7DF7A2FE1694762 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				03EA4A179D2D44D7E59039999E57AE5E /* NSData+CommonCrypto.h */,
-				5D465464DD57D22B3EE2D4582F4ED35A /* NSData+CommonCrypto.m */,
-				63454767D0E71D7DF46F4B284CBF6720 /* Support Files */,
-			);
-			path = CommonCrypto;
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		477A3C20013D1B28F277C1AC0CF73168 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0EEC60F7CB1FA4025206359A5C2B1EF6 /* Info.plist */,
-				81C83A49ED007368AB5FB26DE8CC7978 /* MySqlSwiftNative.modulemap */,
-				ED656E3DC6ACC0B0875470A8C7F026D1 /* MySqlSwiftNative.xcconfig */,
-				62FD02BC8D47DFF79DFB6371714E97EE /* MySqlSwiftNative-dummy.m */,
-				F371D52FCF8FDD33DFF86EEBC0712302 /* MySqlSwiftNative-prefix.pch */,
-				D00455DCF63AC758452DC4BED088EE15 /* MySqlSwiftNative-umbrella.h */,
+				8B24EFE196EFC37E995842FA978ADA37 /* Info.plist */,
+				5322874DBD2FBABDBD03FF3AD6907D40 /* MySqlSwiftNative.modulemap */,
+				0B7A573DE63918D14490BB3064993F4A /* MySqlSwiftNative.xcconfig */,
+				60A08CDED474F8EF5C068597C8999580 /* MySqlSwiftNative-dummy.m */,
+				314CC3FC49526AED963D34D1E70B9784 /* MySqlSwiftNative-prefix.pch */,
+				D1F2AB93A42A49FDAA47FF180E384B2C /* MySqlSwiftNative-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MySqlSwiftNative";
 			sourceTree = "<group>";
 		};
-		63454767D0E71D7DF46F4B284CBF6720 /* Support Files */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB705769F8A45D8BBBF121F6ED3BE01C /* CommonCrypto.modulemap */,
-				F4205D93199FD2B4BDCAB9F574BA16B1 /* CommonCrypto.xcconfig */,
-				34A0B6F18955A8695170EF6848DEE25D /* CommonCrypto-dummy.m */,
-				76A3D520ABC872E9056398DBED5E6612 /* CommonCrypto-prefix.pch */,
-				7F2293254E7C825B0566A12DC1A40E92 /* CommonCrypto-umbrella.h */,
-				9A8B67445FB6D88A510FCEE4E262AB71 /* Info.plist */,
+				793A00A3BDBC446C487C1C55000BD81A /* iOS */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CommonCrypto";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7580EB5C04F044E30962F326B3AF0618 /* Products */ = {
+		4AD95DFE48FE1130FA31A98FFA9A9C0A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1EAEBE50C08AB58BA7228CD6CF8755ED /* CommonCrypto.framework */,
-				47D6098B1789BB4231FBAE7C879FF666 /* MySqlSwiftNative.framework */,
-				6EB90B6BDD3CC79936EA8F8F66AE7F58 /* Pods_iCycle.framework */,
+				24F9869B6813977E481FF46608202E71 /* Info.plist */,
+				CC1180F3514B2EE52F7B962D164B179B /* MTBBarcodeScanner.modulemap */,
+				9CCFFC94357098AB0C51FD61ABDEF86C /* MTBBarcodeScanner.xcconfig */,
+				C88C188A7C1E06D9525A278D5BFCABED /* MTBBarcodeScanner-dummy.m */,
+				6F582BF58344325EA0D31C474D4B49CF /* MTBBarcodeScanner-prefix.pch */,
+				FF8AB83E7B4452D00AD916EB768BEC7E /* MTBBarcodeScanner-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MTBBarcodeScanner";
+			sourceTree = "<group>";
+		};
+		5BE93585E6C179CE05962BA1A360F1AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D81119E8D7601D1E1943E024CA1EFF36 /* CommonCrypto.framework */,
+				6DA35C34BCA974A83BC93A7CEBDF002A /* MTBBarcodeScanner.framework */,
+				E75777EEE1639EDCBEA8CE5C90147457 /* MySqlSwiftNative.framework */,
+				7EAE2CB8AF9396EDA92CE932A70AE98F /* Pods_iCycle.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		637309C64D26A7CF4F3ED1AA64E87175 /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				32ED237ED2F351B2832519CA56AC3446 /* NSData+CommonCrypto.h */,
+				EEB27AC2DEFFB6FA91F1E150E5923FE5 /* NSData+CommonCrypto.m */,
+				A8CFD2E653543D647800771BE401FD2E /* Support Files */,
+			);
+			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
+		793A00A3BDBC446C487C1C55000BD81A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0004C5AF6EEABD638138247BBB588139 /* AVFoundation.framework */,
+				28744B5CB035AD82AE551647DC0B2B57 /* Foundation.framework */,
+				EC63048FF590613A31A60C8712112716 /* QuartzCore.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				ACC789C31DD9D1B77BD1A17E3B4A471E /* Pods */,
-				7580EB5C04F044E30962F326B3AF0618 /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				D86E83C566D7F4F13ED5B472C40D32A4 /* Pods */,
+				5BE93585E6C179CE05962BA1A360F1AA /* Products */,
 				85639517FE03414E2047786551A70851 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -198,42 +244,49 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A4E08306E62FBDA44A332C0BFA740063 /* MySqlSwiftNative */ = {
+		923321DAD72D9DCB4E28DD3B196D5BBD /* MTBBarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				7895E4512207BE7991572F9BD3028E09 /* Connection.swift */,
-				143400089EE3B9773473A2EE9A8B79D2 /* Constants.swift */,
-				C5A5C82F6351D26B56A21CD8E651EDF3 /* main.swift */,
-				AFA7460FCA670AB4729C5F6CA7A074AB /* mysql.swift */,
-				208AC30EBF9FD559D40A92D6C2D13B9D /* Packets.swift */,
-				35DF9C09173A31E8A342EA327B17A719 /* Query.swift */,
-				24A84F58AA9541A06F711886752B7565 /* Result.swift */,
-				44281223E43FE0774264BDE8396BB374 /* sha1.swift */,
-				08B39FB5DAA3D7F7DCBA9A12EC47A8BC /* Socket.swift */,
-				31186DA388DDE58A6EAB08B4581ECBF7 /* Statement.swift */,
-				514B544673AC4C94F9AECBD144F0B71C /* Table.swift */,
-				643716CC937429A2C683DABCCFF2D31F /* tests.swift */,
-				1DBB43C90FE7B54631BEEE7DAFF6C3D9 /* Utils.swift */,
-				477A3C20013D1B28F277C1AC0CF73168 /* Support Files */,
+				7A22FED7F5B08BD8601BF7324E491D9F /* MTBBarcodeScanner.h */,
+				BF8EE38C94BA0B65A2CD0D9AC78622BC /* MTBBarcodeScanner.m */,
+				4AD95DFE48FE1130FA31A98FFA9A9C0A /* Support Files */,
+			);
+			path = MTBBarcodeScanner;
+			sourceTree = "<group>";
+		};
+		A8CFD2E653543D647800771BE401FD2E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A49CCA3434AAA42C54FCAA4C6E1C10E /* CommonCrypto.modulemap */,
+				2935787C9AB09379F85E602AE9F52D75 /* CommonCrypto.xcconfig */,
+				DE30F6517C7A984BE5519446B60A14E6 /* CommonCrypto-dummy.m */,
+				88E9B9D5869AD0BB714256FD8835AFC5 /* CommonCrypto-prefix.pch */,
+				F424F3FDA9437AAB2C176FE6C6836271 /* CommonCrypto-umbrella.h */,
+				3641735EB9236BA40941CA03444F97AB /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CommonCrypto";
+			sourceTree = "<group>";
+		};
+		B9E0A5A7AF3425C38AC7494BE64CE35E /* MySqlSwiftNative */ = {
+			isa = PBXGroup;
+			children = (
+				C95BD15E1A3A058730DAE7171AF06CB5 /* Connection.swift */,
+				4E90B57480DEC4DB969AD63AA3DCE998 /* Constants.swift */,
+				6F49A251F911322AAAC6721A3CD631DC /* main.swift */,
+				B874DAB4C4B53E0E31127DDF2E0DD9ED /* mysql.swift */,
+				A1E5B2CBE49FD458C9F3E15C02DC1B70 /* Packets.swift */,
+				1A5F4323C6F54A03F5C7D2A47EC47410 /* Query.swift */,
+				48F1006F80AE571EC0CEB260CBADF56E /* Result.swift */,
+				CE87097BB3124DFF8785774135EA4AE6 /* sha1.swift */,
+				1782E6E4D032AC524AF6983AB4D148C9 /* Socket.swift */,
+				AF8800A69877233CD54EF27515FCDE5B /* Statement.swift */,
+				F6DB3166A51618CF8264C21FB9C3A6F3 /* Table.swift */,
+				FC4D1942C7B9282109A9E767412A4CFE /* tests.swift */,
+				9747018AEB804CCE71808A2232319678 /* Utils.swift */,
+				02DD8AE644330C07A7DF7A2FE1694762 /* Support Files */,
 			);
 			path = MySqlSwiftNative;
-			sourceTree = "<group>";
-		};
-		ACC789C31DD9D1B77BD1A17E3B4A471E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				39038846EFDA4C80406FD9177889A214 /* CommonCrypto */,
-				A4E08306E62FBDA44A332C0BFA740063 /* MySqlSwiftNative */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CCBC37316FA706EE9EAA66839136E087 /* Pods-iCycle */ = {
@@ -252,6 +305,16 @@
 			);
 			name = "Pods-iCycle";
 			path = "Target Support Files/Pods-iCycle";
+			sourceTree = "<group>";
+		};
+		D86E83C566D7F4F13ED5B472C40D32A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				637309C64D26A7CF4F3ED1AA64E87175 /* CommonCrypto */,
+				923321DAD72D9DCB4E28DD3B196D5BBD /* MTBBarcodeScanner */,
+				B9E0A5A7AF3425C38AC7494BE64CE35E /* MySqlSwiftNative */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,34 +337,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCD4A1CD7B189443E6CC4B1C258C770A /* Headers */ = {
+		F48C0691AFACE1C09748CBF8302D59CF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				213CA9C9B81676F627463E788A22204D /* Pods-iCycle-umbrella.h in Headers */,
+				BDF344136165C00B112C303573CF396B /* MTBBarcodeScanner-umbrella.h in Headers */,
+				003174EE636FF50A0C3330DF17EB5628 /* MTBBarcodeScanner.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F662C89F96B6B04BF610B892232F762F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C679F6EE1B6319AB7EE4518DB76BC8C3 /* Pods-iCycle-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4CEA7DB166171396DF9A4048B390C899 /* Pods-iCycle */ = {
+		7B316FBECF845695A5C8D0669F8373E7 /* MTBBarcodeScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6DBDFC76FBB3486EE2F26520CCFD90F /* Build configuration list for PBXNativeTarget "Pods-iCycle" */;
+			buildConfigurationList = 18DFF7FBF925C502C1646B82A9720090 /* Build configuration list for PBXNativeTarget "MTBBarcodeScanner" */;
 			buildPhases = (
-				10C6EAF31E07AB36E5BDBFCA6E9E2EED /* Sources */,
-				B13E810EF93286931AA28BF2164D8817 /* Frameworks */,
-				DCD4A1CD7B189443E6CC4B1C258C770A /* Headers */,
+				54BA9C8250CD545DC15BA41859087F8B /* Sources */,
+				C06C15F50523A1CA669DDB5FA780512B /* Frameworks */,
+				F48C0691AFACE1C09748CBF8302D59CF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDC5D842AA7AAB8D89E0D6C7B80C5699 /* PBXTargetDependency */,
-				770037BF110263A06458ED738326454A /* PBXTargetDependency */,
 			);
-			name = "Pods-iCycle";
-			productName = "Pods-iCycle";
-			productReference = 6EB90B6BDD3CC79936EA8F8F66AE7F58 /* Pods_iCycle.framework */;
+			name = MTBBarcodeScanner;
+			productName = MTBBarcodeScanner;
+			productReference = 6DA35C34BCA974A83BC93A7CEBDF002A /* MTBBarcodeScanner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		879A1A43C506F994CADD25E16BD3404B /* CommonCrypto */ = {
@@ -318,7 +388,7 @@
 			);
 			name = CommonCrypto;
 			productName = CommonCrypto;
-			productReference = 1EAEBE50C08AB58BA7228CD6CF8755ED /* CommonCrypto.framework */;
+			productReference = D81119E8D7601D1E1943E024CA1EFF36 /* CommonCrypto.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CCF23F1823862AA0CD0B5BEE7627D4F8 /* MySqlSwiftNative */ = {
@@ -335,7 +405,27 @@
 			);
 			name = MySqlSwiftNative;
 			productName = MySqlSwiftNative;
-			productReference = 47D6098B1789BB4231FBAE7C879FF666 /* MySqlSwiftNative.framework */;
+			productReference = E75777EEE1639EDCBEA8CE5C90147457 /* MySqlSwiftNative.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E2D0B4A7769E0B3F93661A82B30E1189 /* Pods-iCycle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661C9F294D381C7EB5F53C09EA28EC7C /* Build configuration list for PBXNativeTarget "Pods-iCycle" */;
+			buildPhases = (
+				16BAAFEF57C2C283167CC529DA650B82 /* Sources */,
+				FB4E1A1E2692CBE06CA498F4F2C34484 /* Frameworks */,
+				F662C89F96B6B04BF610B892232F762F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D86D7D18677AC250B1D45A486F9153CC /* PBXTargetDependency */,
+				597AB9948913125CD0534A6CC065A075 /* PBXTargetDependency */,
+				2A5BBCB70B19B7A7A3BB3FB5839FD2FA /* PBXTargetDependency */,
+			);
+			name = "Pods-iCycle";
+			productName = "Pods-iCycle";
+			productReference = 7EAE2CB8AF9396EDA92CE932A70AE98F /* Pods_iCycle.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -355,23 +445,24 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7580EB5C04F044E30962F326B3AF0618 /* Products */;
+			productRefGroup = 5BE93585E6C179CE05962BA1A360F1AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				879A1A43C506F994CADD25E16BD3404B /* CommonCrypto */,
+				7B316FBECF845695A5C8D0669F8373E7 /* MTBBarcodeScanner */,
 				CCF23F1823862AA0CD0B5BEE7627D4F8 /* MySqlSwiftNative */,
-				4CEA7DB166171396DF9A4048B390C899 /* Pods-iCycle */,
+				E2D0B4A7769E0B3F93661A82B30E1189 /* Pods-iCycle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		10C6EAF31E07AB36E5BDBFCA6E9E2EED /* Sources */ = {
+		16BAAFEF57C2C283167CC529DA650B82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC688FC3D18BC921A96A26DE1B97945 /* Pods-iCycle-dummy.m in Sources */,
+				A07BA0B167DB2088994356FFC6D9C0A7 /* Pods-iCycle-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +472,15 @@
 			files = (
 				F0B0D2B1016ECAB0E6D76F3DA5CE0078 /* CommonCrypto-dummy.m in Sources */,
 				A382E4733C1DD566D6A5DA175B5929EC /* NSData+CommonCrypto.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54BA9C8250CD545DC15BA41859087F8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C03490AD568E65939AB0898A801EB62 /* MTBBarcodeScanner-dummy.m in Sources */,
+				63FCD4AB7816D0115094DF40395918C6 /* MTBBarcodeScanner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,17 +508,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		770037BF110263A06458ED738326454A /* PBXTargetDependency */ = {
+		2A5BBCB70B19B7A7A3BB3FB5839FD2FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MySqlSwiftNative;
 			target = CCF23F1823862AA0CD0B5BEE7627D4F8 /* MySqlSwiftNative */;
-			targetProxy = EE5BB64657B070B7CC01DA139F631E2F /* PBXContainerItemProxy */;
+			targetProxy = 5E76F94561DE3B2309E92CA4193B7D4A /* PBXContainerItemProxy */;
 		};
-		DDC5D842AA7AAB8D89E0D6C7B80C5699 /* PBXTargetDependency */ = {
+		597AB9948913125CD0534A6CC065A075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MTBBarcodeScanner;
+			target = 7B316FBECF845695A5C8D0669F8373E7 /* MTBBarcodeScanner */;
+			targetProxy = 800BCF94E2B536829B8E96AA72801166 /* PBXContainerItemProxy */;
+		};
+		D86D7D18677AC250B1D45A486F9153CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CommonCrypto;
 			target = 879A1A43C506F994CADD25E16BD3404B /* CommonCrypto */;
-			targetProxy = 08E0D60A3381C5A82956BE41111C1BE5 /* PBXContainerItemProxy */;
+			targetProxy = A9C5FB0F3BBC8492F8345C3330F6F980 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -467,7 +573,7 @@
 		};
 		0D6951C7DFBFD6380C573F7A16A19C97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED656E3DC6ACC0B0875470A8C7F026D1 /* MySqlSwiftNative.xcconfig */;
+			baseConfigurationReference = 0B7A573DE63918D14490BB3064993F4A /* MySqlSwiftNative.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -497,9 +603,8 @@
 		};
 		10C92AB78013F532B626C3137DF7D869 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4205D93199FD2B4BDCAB9F574BA16B1 /* CommonCrypto.xcconfig */;
+			baseConfigurationReference = 2935787C9AB09379F85E602AE9F52D75 /* CommonCrypto.xcconfig */;
 			buildSettings = {
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -525,7 +630,123 @@
 			};
 			name = Debug;
 		};
-		1631EE9F8C7EB5CA4D27A2D01EBD1301 /* Debug */ = {
+		3265B4EE758A32331F315672711DD12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2935787C9AB09379F85E602AE9F52D75 /* CommonCrypto.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CommonCrypto/CommonCrypto-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CommonCrypto/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CommonCrypto/CommonCrypto.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CommonCrypto;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		37E726F44A7E1400E77CDA98C7BDBCE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CCFFC94357098AB0C51FD61ABDEF86C /* MTBBarcodeScanner.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MTBBarcodeScanner/MTBBarcodeScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTBBarcodeScanner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MTBBarcodeScanner/MTBBarcodeScanner.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MTBBarcodeScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C231FBD15726B87064132A54C7C082B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CCFFC94357098AB0C51FD61ABDEF86C /* MTBBarcodeScanner.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MTBBarcodeScanner/MTBBarcodeScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTBBarcodeScanner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MTBBarcodeScanner/MTBBarcodeScanner.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MTBBarcodeScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D00BA6B4230F93C956A0DC1D85AF4DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7A573DE63918D14490BB3064993F4A /* MySqlSwiftNative.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MySqlSwiftNative/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MySqlSwiftNative;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		915343F2511C2C5F03397DABBF9301E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8447EA32D776B7755C247232EB45D5C /* Pods-iCycle.debug.xcconfig */;
 			buildSettings = {
@@ -558,98 +779,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		3265B4EE758A32331F315672711DD12C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4205D93199FD2B4BDCAB9F574BA16B1 /* CommonCrypto.xcconfig */;
-			buildSettings = {
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CommonCrypto/CommonCrypto-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CommonCrypto/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CommonCrypto/CommonCrypto.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CommonCrypto;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4D00BA6B4230F93C956A0DC1D85AF4DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED656E3DC6ACC0B0875470A8C7F026D1 /* MySqlSwiftNative.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MySqlSwiftNative/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MySqlSwiftNative;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		619947ACE420A47E094FD701FE5FDA07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CE2849E00ABE5AEC906333BA20B10F8 /* Pods-iCycle.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-iCycle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iCycle/Pods-iCycle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iCycle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -689,9 +818,51 @@
 			};
 			name = Release;
 		};
+		E5E6ED23BE4CBC15CF622A83D0DD76E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CE2849E00ABE5AEC906333BA20B10F8 /* Pods-iCycle.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-iCycle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iCycle/Pods-iCycle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_iCycle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18DFF7FBF925C502C1646B82A9720090 /* Build configuration list for PBXNativeTarget "MTBBarcodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37E726F44A7E1400E77CDA98C7BDBCE5 /* Debug */,
+				3C231FBD15726B87064132A54C7C082B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1D6649917FDC806BEB551333C8ABC9B8 /* Build configuration list for PBXNativeTarget "CommonCrypto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -710,20 +881,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		661C9F294D381C7EB5F53C09EA28EC7C /* Build configuration list for PBXNativeTarget "Pods-iCycle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				915343F2511C2C5F03397DABBF9301E8 /* Debug */,
+				E5E6ED23BE4CBC15CF622A83D0DD76E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A2808C8F43952A6DE6B8D48205433DEF /* Build configuration list for PBXNativeTarget "MySqlSwiftNative" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D6951C7DFBFD6380C573F7A16A19C97 /* Debug */,
 				4D00BA6B4230F93C956A0DC1D85AF4DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6DBDFC76FBB3486EE2F26520CCFD90F /* Build configuration list for PBXNativeTarget "Pods-iCycle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1631EE9F8C7EB5CA4D27A2D01EBD1301 /* Debug */,
-				619947ACE420A47E094FD701FE5FDA07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

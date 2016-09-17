@@ -1,15 +1,18 @@
 PODS:
   - CommonCrypto (1.1)
+  - MTBBarcodeScanner (2.0.3)
   - MySqlSwiftNative (1.0.10)
 
 DEPENDENCIES:
   - CommonCrypto (~> 1.1)
+  - MTBBarcodeScanner (~> 2.0)
   - MySqlSwiftNative (~> 1.0.6)
 
 SPEC CHECKSUMS:
   CommonCrypto: e18c8416332cca5efe80c197f2a522d471c42626
+  MTBBarcodeScanner: a05f36125ff8ea48011b84715c5faa10838ddb80
   MySqlSwiftNative: 25d6d8c5db9d114a9b839aa5cb7de6d1f460f596
 
-PODFILE CHECKSUM: 9d627a004fc695e6984141e6ee70fd4f8af85ce5
+PODFILE CHECKSUM: cea959f35d2adc1d4d3b8cd36511db65de92cd59
 
 COCOAPODS: 1.0.1
