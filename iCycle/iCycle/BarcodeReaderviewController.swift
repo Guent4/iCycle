@@ -151,15 +151,9 @@ class BarcodeReaderViewController: UIViewController, AVCaptureMetadataOutputObje
             
             if trimmedCodeString.hasPrefix("0") && trimmedCodeString.characters.count > 1 {
                 trimmedCodeNoZero = String(trimmedCodeString.characters.dropFirst())
-                
-                // Send the doctored UPC to DataService.searchAPI()
-                
-                // DataService.searchAPI(trimmedCodeNoZero)
+                DataService.register(trimmedCodeNoZero)
             } else {
-                
-                // Send the doctored EAN to DataService.searchAPI()
-                
-                // DataService.searchAPI(trimmedCodeString)
+                DataService.register(trimmedCode)
             }
             
             self.navigationController?.popViewControllerAnimated(true)
