@@ -13,9 +13,11 @@
 		6AF3135A1D8CC70A007BDB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AF313591D8CC70A007BDB1E /* Assets.xcassets */; };
 		6AF3135D1D8CC70A007BDB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF3135B1D8CC70A007BDB1E /* LaunchScreen.storyboard */; };
 		6AF313651D8CD4EB007BDB1E /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF313641D8CD4EB007BDB1E /* Scanner.swift */; };
+		92EB5DF35BA481C2E2DD1C1A /* Pods_iCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7483C49DCC6585EF11D615ED /* Pods_iCycle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ABBD7BFCD5FF3C04A1247B7 /* Pods-iCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCycle.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCycle/Pods-iCycle.release.xcconfig"; sourceTree = "<group>"; };
 		6AF3134F1D8CC70A007BDB1E /* iCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF313521D8CC70A007BDB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF313541D8CC70A007BDB1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		6AF3135C1D8CC70A007BDB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AF3135E1D8CC70A007BDB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF313641D8CD4EB007BDB1E /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		7483C49DCC6585EF11D615ED /* Pods_iCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F1F329828705B70566F1DC /* Pods-iCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iCycle/Pods-iCycle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EB5DF35BA481C2E2DD1C1A /* Pods_iCycle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B7B0F144A82675BF21E0F88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6F1F329828705B70566F1DC /* Pods-iCycle.debug.xcconfig */,
+				3ABBD7BFCD5FF3C04A1247B7 /* Pods-iCycle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6AF313461D8CC70A007BDB1E = {
 			isa = PBXGroup;
 			children = (
 				6AF313511D8CC70A007BDB1E /* iCycle */,
 				6AF313501D8CC70A007BDB1E /* Products */,
+				4B7B0F144A82675BF21E0F88 /* Pods */,
+				AB2B256599D3688725D43460 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = iCycle;
 			sourceTree = "<group>";
 		};
+		AB2B256599D3688725D43460 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7483C49DCC6585EF11D615ED /* Pods_iCycle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AF313611D8CC70A007BDB1E /* Build configuration list for PBXNativeTarget "iCycle" */;
 			buildPhases = (
+				761F3F0D05C500D18834A267 /* [CP] Check Pods Manifest.lock */,
 				6AF3134B1D8CC70A007BDB1E /* Sources */,
 				6AF3134C1D8CC70A007BDB1E /* Frameworks */,
 				6AF3134D1D8CC70A007BDB1E /* Resources */,
+				42F304090D5897D7D0C02FA5 /* [CP] Embed Pods Frameworks */,
+				BA03C7595CB143DE0A581603 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42F304090D5897D7D0C02FA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iCycle/Pods-iCycle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		761F3F0D05C500D18834A267 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA03C7595CB143DE0A581603 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iCycle/Pods-iCycle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6AF3134B1D8CC70A007BDB1E /* Sources */ = {
@@ -251,6 +326,7 @@
 		};
 		6AF313621D8CC70A007BDB1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6F1F329828705B70566F1DC /* Pods-iCycle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iCycle/Info.plist;
@@ -262,6 +338,7 @@
 		};
 		6AF313631D8CC70A007BDB1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABBD7BFCD5FF3C04A1247B7 /* Pods-iCycle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iCycle/Info.plist;

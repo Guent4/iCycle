@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (3.3.0)
+  - MySqlSwiftNative (1.0.10)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - MySqlSwiftNative (~> 1.0.6)
+
+SPEC CHECKSUMS:
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  MySqlSwiftNative: 25d6d8c5db9d114a9b839aa5cb7de6d1f460f596
+
+PODFILE CHECKSUM: e4c77b5e08388d289e93fc52abfc9e410009d41e
+
+COCOAPODS: 1.0.1
