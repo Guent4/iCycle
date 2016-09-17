@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tBar: UITabBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()

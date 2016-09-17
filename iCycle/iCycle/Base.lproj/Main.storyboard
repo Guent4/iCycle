@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ybe-QB-g9l">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,16 +18,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sB3-D4-PUP">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Camera View" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-bT-Z9Y">
+                                <rect key="frame" x="252" y="285" width="103" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-xL-VxA">
+                                <rect key="frame" x="539" y="562" width="41" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="ybe-QB-g9l" kind="show" id="HVi-tB-EXD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jn2-bT-Z9Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C28-qR-NgZ"/>
+                            <constraint firstItem="jn2-bT-Z9Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X0d-5I-5in"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jNU-xL-VxA" secondAttribute="trailing" constant="2" id="Zjp-WM-MEK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jNU-xL-VxA" secondAttribute="bottom" constant="8" id="nfi-ra-Fwy"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="894"/>
+            <point key="canvasLocation" x="1580" y="943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IhM-1P-btm">
+            <objects>
+                <viewController id="ybe-QB-g9l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GEB-Vc-C18"/>
+                        <viewControllerLayoutGuide type="bottom" id="ps7-ae-jrS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fkN-AL-PcD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8GC-bv-dCl">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Rhv-yy-ORz"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Home" id="vnL-7t-ZdL"/>
+                                    <tabBarItem title="Camera" id="RHe-bN-Pzf"/>
+                                    <tabBarItem title="Friend" id="6fr-Gu-QLx"/>
+                                    <tabBarItem title="Settings" id="tws-1U-DeU"/>
+                                </items>
+                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxN-5N-KRr">
+                                <rect key="frame" x="194" y="224" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="jwn-9e-XUE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ps7-ae-jrS" firstAttribute="top" secondItem="8GC-bv-dCl" secondAttribute="bottom" id="t6i-vV-8qb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqN-u7-w0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="1824"/>
         </scene>
     </scenes>
 </document>
