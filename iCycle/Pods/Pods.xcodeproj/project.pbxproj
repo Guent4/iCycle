@@ -1,793 +1,1435 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89180CEB7C8E10843C0654339CED24 /* Error.swift */; };
-		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1339BAB4B89D1F43017B6A297A8E2 /* Timeline.swift */; };
-		1BF6710739B6341A2E188BF84044E3DE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8064100811F6A516C72019DAE9728 /* Table.swift */; };
-		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B25D3233DC258C98D339CEDA5611F /* Validation.swift */; };
-		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB721F15B69DC478B176499712F385 /* NetworkReachabilityManager.swift */; };
-		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C17CA209E414DBC821EFF3688F0A7B /* ResponseSerialization.swift */; };
-		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C91EF5D4BB684D9F3480D6DE54B709 /* Manager.swift */; };
-		48B7F3113CB8A6FF44688B12DCE6BED5 /* Pods-iCycle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E224ED165FBEDEDE5D8A8B9914265093 /* Pods-iCycle-dummy.m */; };
-		4C06AE55E90954E2E3D688DEA1E20B8B /* sha1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F04C6B3648D872ACAE94EC05D9C706 /* sha1.swift */; };
-		552325152C0D4098BB06DE6B5A6D3CAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7667B083AD8F353E4A6F3550BC9595 /* Constants.swift */; };
-		5B54EF1EB413DBF17D2590DD07088B6C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B997DD9D76C5711B460FC776F1699 /* Result.swift */; };
-		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778FB460759F8F46A4DA8F06B18ABFF /* Upload.swift */; };
-		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EB5BDCA39436436F8DB524276BFC0 /* Download.swift */; };
-		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8790D765D499B49313F3EA3F07BC251 /* Response.swift */; };
-		64ACF8B416A81F6763F1FE5B1C84ED48 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE25B9D887A7DDA17B51C1BA38AE05 /* Socket.swift */; };
-		6F2474A67EB8FB9C788D67907E2D634B /* Packets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E02633B36A2DECA0436EDAA3D08CB /* Packets.swift */; };
-		74EB33FE8A7DB71F3ADB67E500231239 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C8E400965AF438EDF7D369979C3AC6 /* Statement.swift */; };
-		76FC7F57882BA00442FAD32BE553491C /* MySqlSwiftNative-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF1E13C1550C2944E86434CB709274C /* MySqlSwiftNative-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		772C719284442372A80879E1F253DA47 /* tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673EDBCFCD2DEBAFE9F094DD1F7EEF2 /* tests.swift */; };
-		78B6A08076D319C7458CDC5A21EE26B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6937344BF01BF1BFE102D1BEB30750 /* ServerTrustPolicy.swift */; };
-		7EDC8516A33854A712FF8A65E8BFA857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15672ED2A27A391813C7F8157F124464 /* Alamofire.swift */; };
-		9089B2FE6A194D828BAFA65A05315F5A /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F599C2A3C2A7A7D8E3D4B83F3EEB24B /* Connection.swift */; };
-		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6446AAD922B08D85ADD7FB54E93CD031 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA824425190564D2EA0C3A7E73CF1D8E /* Result.swift */; };
-		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F114DA69B66110EDE01439559ABBE04A /* Alamofire-dummy.m */; };
-		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6292B1B9555A8CABF728BE223E88EB79 /* Stream.swift */; };
-		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0500FECAF052F6E98AA84B183C5FFC0B /* Notifications.swift */; };
-		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2F9EED5701986E93FD58788847993 /* ParameterEncoding.swift */; };
-		C2F6A68D4486D75E865B4A84BD4F75AF /* MySqlSwiftNative-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F6A6C60F7DFA7F0B2A6BE9F6F32E13 /* MySqlSwiftNative-dummy.m */; };
-		C6035E3FE437AE0C0CA258121186FCCF /* Pods-iCycle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA8DBC9829BFB8EBAFFE8EE86B1BC99 /* Pods-iCycle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480F01F75B1CE56C5AEA7593762AD804 /* MultipartFormData.swift */; };
-		C97BC46E81DE8D17A88E4B665F0727F1 /* mysql.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66B61583F318D097BCACD5788553EFD /* mysql.swift */; };
-		D10EC76A68890F9CC8BCEA1CC6B88F18 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107507CC0CFF4CFA2C2ECD8F49AAE099 /* Utils.swift */; };
-		E2CF1763A9D75264B9EF1565D1B00F62 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C62BFF1291CE9142758AAADD8B1787 /* main.swift */; };
-		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA379D549027DA8D2E0243CCF97208C1 /* Request.swift */; };
-		F1239C46477C2FC8F8168AAD88C6ACFE /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478E94E31A8CF42BF9A331CEBDCDD2FE /* Query.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1CEFFC758974F95D9453DF4E1D408585 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
-		};
-		F5B232E47FAE2C3E5A8262E57A45CA5D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CCF23F1823862AA0CD0B5BEE7627D4F8;
-			remoteInfo = MySqlSwiftNative;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0500FECAF052F6E98AA84B183C5FFC0B /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		0B7667B083AD8F353E4A6F3550BC9595 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/MySqlSwiftNative/Constants.swift; sourceTree = "<group>"; };
-		0C550040C3C97DB0F5C72CC7F544976E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E6937344BF01BF1BFE102D1BEB30750 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		107507CC0CFF4CFA2C2ECD8F49AAE099 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/MySqlSwiftNative/Utils.swift; sourceTree = "<group>"; };
-		120EB5BDCA39436436F8DB524276BFC0 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
-		15672ED2A27A391813C7F8157F124464 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		15C2F9EED5701986E93FD58788847993 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		17EE25B9D887A7DDA17B51C1BA38AE05 /* Socket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = Sources/MySqlSwiftNative/Socket.swift; sourceTree = "<group>"; };
-		1B89180CEB7C8E10843C0654339CED24 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		2EF1E13C1550C2944E86434CB709274C /* MySqlSwiftNative-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MySqlSwiftNative-umbrella.h"; sourceTree = "<group>"; };
-		2FCEEF99439D579B193C52D043EB74E4 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		3A1467EE98C71DCDD6D620B5F929B25E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CE2849E00ABE5AEC906333BA20B10F8 /* Pods-iCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iCycle.release.xcconfig"; sourceTree = "<group>"; };
-		3F599C2A3C2A7A7D8E3D4B83F3EEB24B /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/MySqlSwiftNative/Connection.swift; sourceTree = "<group>"; };
-		45C8064100811F6A516C72019DAE9728 /* Table.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Table.swift; path = Sources/MySqlSwiftNative/Table.swift; sourceTree = "<group>"; };
-		478E94E31A8CF42BF9A331CEBDCDD2FE /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/MySqlSwiftNative/Query.swift; sourceTree = "<group>"; };
-		480F01F75B1CE56C5AEA7593762AD804 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		4939C8E64670E826039101317680E73B /* Pods_iCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A6B997DD9D76C5711B460FC776F1699 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/MySqlSwiftNative/Result.swift; sourceTree = "<group>"; };
-		5D089FCC2F495A04450F9CECE342CC77 /* Pods-iCycle-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iCycle-acknowledgements.plist"; sourceTree = "<group>"; };
-		5E8B52659A82E155131CBEFC3645E33F /* Pods-iCycle-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iCycle-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6292B1B9555A8CABF728BE223E88EB79 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
-		642B25D3233DC258C98D339CEDA5611F /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		6446AAD922B08D85ADD7FB54E93CD031 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		74C62BFF1291CE9142758AAADD8B1787 /* main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/MySqlSwiftNative/main.swift; sourceTree = "<group>"; };
-		74F6A6C60F7DFA7F0B2A6BE9F6F32E13 /* MySqlSwiftNative-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MySqlSwiftNative-dummy.m"; sourceTree = "<group>"; };
-		7EAB721F15B69DC478B176499712F385 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		7EF4D8F8A2063DC5AE53A88551A71AC8 /* MySqlSwiftNative.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MySqlSwiftNative.modulemap; sourceTree = "<group>"; };
-		893E02633B36A2DECA0436EDAA3D08CB /* Packets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Packets.swift; path = Sources/MySqlSwiftNative/Packets.swift; sourceTree = "<group>"; };
-		8E2A0941BF185C39ED612E03CB675CA4 /* MySqlSwiftNative.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MySqlSwiftNative.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9474FCD7C6999BF11A1864C22AC809EB /* Pods-iCycle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iCycle.modulemap"; sourceTree = "<group>"; };
-		9673EDBCFCD2DEBAFE9F094DD1F7EEF2 /* tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = tests.swift; path = Sources/MySqlSwiftNative/tests.swift; sourceTree = "<group>"; };
-		9BA8DBC9829BFB8EBAFFE8EE86B1BC99 /* Pods-iCycle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iCycle-umbrella.h"; sourceTree = "<group>"; };
-		A5C17CA209E414DBC821EFF3688F0A7B /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		A66B61583F318D097BCACD5788553EFD /* mysql.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = mysql.swift; path = Sources/MySqlSwiftNative/mysql.swift; sourceTree = "<group>"; };
-		A7C91EF5D4BB684D9F3480D6DE54B709 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		AA824425190564D2EA0C3A7E73CF1D8E /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		AAF3C9D868FB041CF6A85ACD35AC0518 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		AF0C4E45FB74A2BAF900654C8BDC0850 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF9251F9C4946CF7397568C223F2DE04 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		AFEA0D72AE989F5DEAA24C821E2E15CA /* MySqlSwiftNative-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MySqlSwiftNative-prefix.pch"; sourceTree = "<group>"; };
-		B0D7AC4FB0C01E1D452B7A358CE549C1 /* MySqlSwiftNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MySqlSwiftNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B778FB460759F8F46A4DA8F06B18ABFF /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		C630BC24885BC9F676A53ABACC3EEDAF /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8790D765D499B49313F3EA3F07BC251 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		CBC64CB1EBB2A948EC34F27134E189D3 /* Pods-iCycle-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iCycle-resources.sh"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D6E1339BAB4B89D1F43017B6A297A8E2 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		E0F04C6B3648D872ACAE94EC05D9C706 /* sha1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = sha1.swift; path = Sources/MySqlSwiftNative/sha1.swift; sourceTree = "<group>"; };
-		E224ED165FBEDEDE5D8A8B9914265093 /* Pods-iCycle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iCycle-dummy.m"; sourceTree = "<group>"; };
-		E8447EA32D776B7755C247232EB45D5C /* Pods-iCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iCycle.debug.xcconfig"; sourceTree = "<group>"; };
-		E9C8E400965AF438EDF7D369979C3AC6 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/MySqlSwiftNative/Statement.swift; sourceTree = "<group>"; };
-		EA379D549027DA8D2E0243CCF97208C1 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		EB740139521A0A075FFEDE907BF60F8F /* Pods-iCycle-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iCycle-frameworks.sh"; sourceTree = "<group>"; };
-		F114DA69B66110EDE01439559ABBE04A /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		6B92510FCBFA724F0EEE2EB8996E99E0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78B6A08076D319C7458CDC5A21EE26B6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEA8AD1284936DE406FB3CC4F15F76F4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7EDC8516A33854A712FF8A65E8BFA857 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		20FDD8491B8937841CB4EB71D29AAB45 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				15672ED2A27A391813C7F8157F124464 /* Alamofire.swift */,
-				120EB5BDCA39436436F8DB524276BFC0 /* Download.swift */,
-				1B89180CEB7C8E10843C0654339CED24 /* Error.swift */,
-				A7C91EF5D4BB684D9F3480D6DE54B709 /* Manager.swift */,
-				480F01F75B1CE56C5AEA7593762AD804 /* MultipartFormData.swift */,
-				7EAB721F15B69DC478B176499712F385 /* NetworkReachabilityManager.swift */,
-				0500FECAF052F6E98AA84B183C5FFC0B /* Notifications.swift */,
-				15C2F9EED5701986E93FD58788847993 /* ParameterEncoding.swift */,
-				EA379D549027DA8D2E0243CCF97208C1 /* Request.swift */,
-				C8790D765D499B49313F3EA3F07BC251 /* Response.swift */,
-				A5C17CA209E414DBC821EFF3688F0A7B /* ResponseSerialization.swift */,
-				AA824425190564D2EA0C3A7E73CF1D8E /* Result.swift */,
-				0E6937344BF01BF1BFE102D1BEB30750 /* ServerTrustPolicy.swift */,
-				6292B1B9555A8CABF728BE223E88EB79 /* Stream.swift */,
-				D6E1339BAB4B89D1F43017B6A297A8E2 /* Timeline.swift */,
-				B778FB460759F8F46A4DA8F06B18ABFF /* Upload.swift */,
-				642B25D3233DC258C98D339CEDA5611F /* Validation.swift */,
-				D97E89B2D66B5356D60381B1B36678A0 /* Support Files */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		2836DFB143A59246F22A7D024F37AB85 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C630BC24885BC9F676A53ABACC3EEDAF /* Alamofire.framework */,
-				B0D7AC4FB0C01E1D452B7A358CE549C1 /* MySqlSwiftNative.framework */,
-				4939C8E64670E826039101317680E73B /* Pods_iCycle.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8A1A3EA2036BE49C064FB273109CF355 /* Pods */,
-				2836DFB143A59246F22A7D024F37AB85 /* Products */,
-				85639517FE03414E2047786551A70851 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		7E81A99D4E964AC573EA3BE2FCCE197D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF0C4E45FB74A2BAF900654C8BDC0850 /* Info.plist */,
-				7EF4D8F8A2063DC5AE53A88551A71AC8 /* MySqlSwiftNative.modulemap */,
-				8E2A0941BF185C39ED612E03CB675CA4 /* MySqlSwiftNative.xcconfig */,
-				74F6A6C60F7DFA7F0B2A6BE9F6F32E13 /* MySqlSwiftNative-dummy.m */,
-				AFEA0D72AE989F5DEAA24C821E2E15CA /* MySqlSwiftNative-prefix.pch */,
-				2EF1E13C1550C2944E86434CB709274C /* MySqlSwiftNative-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MySqlSwiftNative";
-			sourceTree = "<group>";
-		};
-		85639517FE03414E2047786551A70851 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CCBC37316FA706EE9EAA66839136E087 /* Pods-iCycle */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		8A1A3EA2036BE49C064FB273109CF355 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				20FDD8491B8937841CB4EB71D29AAB45 /* Alamofire */,
-				9B64D9CB444117BF3F13A837BCE303BA /* MySqlSwiftNative */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9B64D9CB444117BF3F13A837BCE303BA /* MySqlSwiftNative */ = {
-			isa = PBXGroup;
-			children = (
-				3F599C2A3C2A7A7D8E3D4B83F3EEB24B /* Connection.swift */,
-				0B7667B083AD8F353E4A6F3550BC9595 /* Constants.swift */,
-				74C62BFF1291CE9142758AAADD8B1787 /* main.swift */,
-				A66B61583F318D097BCACD5788553EFD /* mysql.swift */,
-				893E02633B36A2DECA0436EDAA3D08CB /* Packets.swift */,
-				478E94E31A8CF42BF9A331CEBDCDD2FE /* Query.swift */,
-				4A6B997DD9D76C5711B460FC776F1699 /* Result.swift */,
-				E0F04C6B3648D872ACAE94EC05D9C706 /* sha1.swift */,
-				17EE25B9D887A7DDA17B51C1BA38AE05 /* Socket.swift */,
-				E9C8E400965AF438EDF7D369979C3AC6 /* Statement.swift */,
-				45C8064100811F6A516C72019DAE9728 /* Table.swift */,
-				9673EDBCFCD2DEBAFE9F094DD1F7EEF2 /* tests.swift */,
-				107507CC0CFF4CFA2C2ECD8F49AAE099 /* Utils.swift */,
-				7E81A99D4E964AC573EA3BE2FCCE197D /* Support Files */,
-			);
-			path = MySqlSwiftNative;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CCBC37316FA706EE9EAA66839136E087 /* Pods-iCycle */ = {
-			isa = PBXGroup;
-			children = (
-				3A1467EE98C71DCDD6D620B5F929B25E /* Info.plist */,
-				9474FCD7C6999BF11A1864C22AC809EB /* Pods-iCycle.modulemap */,
-				5E8B52659A82E155131CBEFC3645E33F /* Pods-iCycle-acknowledgements.markdown */,
-				5D089FCC2F495A04450F9CECE342CC77 /* Pods-iCycle-acknowledgements.plist */,
-				E224ED165FBEDEDE5D8A8B9914265093 /* Pods-iCycle-dummy.m */,
-				EB740139521A0A075FFEDE907BF60F8F /* Pods-iCycle-frameworks.sh */,
-				CBC64CB1EBB2A948EC34F27134E189D3 /* Pods-iCycle-resources.sh */,
-				9BA8DBC9829BFB8EBAFFE8EE86B1BC99 /* Pods-iCycle-umbrella.h */,
-				E8447EA32D776B7755C247232EB45D5C /* Pods-iCycle.debug.xcconfig */,
-				3CE2849E00ABE5AEC906333BA20B10F8 /* Pods-iCycle.release.xcconfig */,
-			);
-			name = "Pods-iCycle";
-			path = "Target Support Files/Pods-iCycle";
-			sourceTree = "<group>";
-		};
-		D97E89B2D66B5356D60381B1B36678A0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF9251F9C4946CF7397568C223F2DE04 /* Alamofire.modulemap */,
-				2FCEEF99439D579B193C52D043EB74E4 /* Alamofire.xcconfig */,
-				F114DA69B66110EDE01439559ABBE04A /* Alamofire-dummy.m */,
-				AAF3C9D868FB041CF6A85ACD35AC0518 /* Alamofire-prefix.pch */,
-				6446AAD922B08D85ADD7FB54E93CD031 /* Alamofire-umbrella.h */,
-				0C550040C3C97DB0F5C72CC7F544976E /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		2FB698059C44FF620616AC1A3CD3CB98 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				76FC7F57882BA00442FAD32BE553491C /* MySqlSwiftNative-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D519DC1C73C4F2912BAE3457F356794A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C6035E3FE437AE0C0CA258121186FCCF /* Pods-iCycle-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFDF3B631BBB965A372347705CA14854 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */;
-			buildPhases = (
-				95CC2C7E06DC188A05DAAEE9CAA555A3 /* Sources */,
-				B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */,
-				EFDF3B631BBB965A372347705CA14854 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = C630BC24885BC9F676A53ABACC3EEDAF /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B720809962F49F39B7E0F50AFBBC550F /* Pods-iCycle */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8274FB4AEED140B32EFBD295014B141D /* Build configuration list for PBXNativeTarget "Pods-iCycle" */;
-			buildPhases = (
-				0A0AB28163BB0B0E00A09F8C4FC0860C /* Sources */,
-				EEA8AD1284936DE406FB3CC4F15F76F4 /* Frameworks */,
-				D519DC1C73C4F2912BAE3457F356794A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E45C6B92D36381F7567A1B879D731208 /* PBXTargetDependency */,
-				283DCF1F48804F633D8C5BE43212997B /* PBXTargetDependency */,
-			);
-			name = "Pods-iCycle";
-			productName = "Pods-iCycle";
-			productReference = 4939C8E64670E826039101317680E73B /* Pods_iCycle.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CCF23F1823862AA0CD0B5BEE7627D4F8 /* MySqlSwiftNative */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A2808C8F43952A6DE6B8D48205433DEF /* Build configuration list for PBXNativeTarget "MySqlSwiftNative" */;
-			buildPhases = (
-				E0013B955479914783B9A14AC9470DF5 /* Sources */,
-				6B92510FCBFA724F0EEE2EB8996E99E0 /* Frameworks */,
-				2FB698059C44FF620616AC1A3CD3CB98 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MySqlSwiftNative;
-			productName = MySqlSwiftNative;
-			productReference = B0D7AC4FB0C01E1D452B7A358CE549C1 /* MySqlSwiftNative.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2836DFB143A59246F22A7D024F37AB85 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
-				CCF23F1823862AA0CD0B5BEE7627D4F8 /* MySqlSwiftNative */,
-				B720809962F49F39B7E0F50AFBBC550F /* Pods-iCycle */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		0A0AB28163BB0B0E00A09F8C4FC0860C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48B7F3113CB8A6FF44688B12DCE6BED5 /* Pods-iCycle-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95CC2C7E06DC188A05DAAEE9CAA555A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */,
-				8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */,
-				5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */,
-				095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */,
-				4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */,
-				C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */,
-				34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */,
-				BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */,
-				C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */,
-				EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */,
-				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
-				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
-				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,
-				7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */,
-				AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */,
-				16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */,
-				5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */,
-				2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0013B955479914783B9A14AC9470DF5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9089B2FE6A194D828BAFA65A05315F5A /* Connection.swift in Sources */,
-				552325152C0D4098BB06DE6B5A6D3CAE /* Constants.swift in Sources */,
-				E2CF1763A9D75264B9EF1565D1B00F62 /* main.swift in Sources */,
-				C97BC46E81DE8D17A88E4B665F0727F1 /* mysql.swift in Sources */,
-				C2F6A68D4486D75E865B4A84BD4F75AF /* MySqlSwiftNative-dummy.m in Sources */,
-				6F2474A67EB8FB9C788D67907E2D634B /* Packets.swift in Sources */,
-				F1239C46477C2FC8F8168AAD88C6ACFE /* Query.swift in Sources */,
-				5B54EF1EB413DBF17D2590DD07088B6C /* Result.swift in Sources */,
-				4C06AE55E90954E2E3D688DEA1E20B8B /* sha1.swift in Sources */,
-				64ACF8B416A81F6763F1FE5B1C84ED48 /* Socket.swift in Sources */,
-				74EB33FE8A7DB71F3ADB67E500231239 /* Statement.swift in Sources */,
-				1BF6710739B6341A2E188BF84044E3DE /* Table.swift in Sources */,
-				772C719284442372A80879E1F253DA47 /* tests.swift in Sources */,
-				D10EC76A68890F9CC8BCEA1CC6B88F18 /* Utils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		283DCF1F48804F633D8C5BE43212997B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MySqlSwiftNative;
-			target = CCF23F1823862AA0CD0B5BEE7627D4F8 /* MySqlSwiftNative */;
-			targetProxy = F5B232E47FAE2C3E5A8262E57A45CA5D /* PBXContainerItemProxy */;
-		};
-		E45C6B92D36381F7567A1B879D731208 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 1CEFFC758974F95D9453DF4E1D408585 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		034014829C1E4434983CF3A690C12017 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		0D6951C7DFBFD6380C573F7A16A19C97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E2A0941BF185C39ED612E03CB675CA4 /* MySqlSwiftNative.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MySqlSwiftNative/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MySqlSwiftNative;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		32AD5F8918CA8B349E4671410FA624C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FCEEF99439D579B193C52D043EB74E4 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4D00BA6B4230F93C956A0DC1D85AF4DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E2A0941BF185C39ED612E03CB675CA4 /* MySqlSwiftNative.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MySqlSwiftNative/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MySqlSwiftNative/MySqlSwiftNative.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MySqlSwiftNative;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		75218111E718FACE36F771E8ABECDB62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FCEEF99439D579B193C52D043EB74E4 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		88A3F7A93FD41DD7D6467C52BA792928 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8447EA32D776B7755C247232EB45D5C /* Pods-iCycle.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-iCycle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iCycle/Pods-iCycle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iCycle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FC17F39615517C2E618B499449AA2F12 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CE2849E00ABE5AEC906333BA20B10F8 /* Pods-iCycle.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-iCycle/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iCycle/Pods-iCycle.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iCycle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				034014829C1E4434983CF3A690C12017 /* Debug */,
-				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75218111E718FACE36F771E8ABECDB62 /* Debug */,
-				32AD5F8918CA8B349E4671410FA624C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8274FB4AEED140B32EFBD295014B141D /* Build configuration list for PBXNativeTarget "Pods-iCycle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88A3F7A93FD41DD7D6467C52BA792928 /* Debug */,
-				FC17F39615517C2E618B499449AA2F12 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A2808C8F43952A6DE6B8D48205433DEF /* Build configuration list for PBXNativeTarget "MySqlSwiftNative" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0D6951C7DFBFD6380C573F7A16A19C97 /* Debug */,
-				4D00BA6B4230F93C956A0DC1D85AF4DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>034014829C1E4434983CF3A690C12017</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_DEBUG=1</string>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>075854AEBDABFF7CAF1B6517F1A95D3A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Statement.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Statement.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0917C1212F012ED563C6F8E404723663</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Connection.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Connection.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0D6951C7DFBFD6380C573F7A16A19C97</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>38A1FFEBC11E826222C4C073D1E73791</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MySqlSwiftNative/MySqlSwiftNative-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/MySqlSwiftNative/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/MySqlSwiftNative/MySqlSwiftNative.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>MySqlSwiftNative</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>14CEF8B77C66E864D8568C1509F447E1</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>CCF23F1823862AA0CD0B5BEE7627D4F8</string>
+			<key>remoteInfo</key>
+			<string>MySqlSwiftNative</string>
+		</dict>
+		<key>1BF6710739B6341A2E188BF84044E3DE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2C1200B69A76A3AD696A6A5CF3290910</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1D6C77E13037458634853A6F8D0F9E0F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D1D500F4AFC361D9635B813D026D0467</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>26F9F6F1358A993CD4D52F36F68B5BF5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3CE2849E00ABE5AEC906333BA20B10F8</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-iCycle/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-iCycle/Pods-iCycle.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_iCycle</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>281904C749E33EDB1696188845C3FE76</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>main.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/main.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2AF419DDE42535660CEF56802CB56D14</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>MySqlSwiftNative.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2C1200B69A76A3AD696A6A5CF3290910</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Table.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Table.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>034014829C1E4434983CF3A690C12017</string>
+				<string>C7E474A03CAE21F1CB6046E7344C59BD</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2FB698059C44FF620616AC1A3CD3CB98</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>76FC7F57882BA00442FAD32BE553491C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>38A1FFEBC11E826222C4C073D1E73791</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>MySqlSwiftNative.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A1467EE98C71DCDD6D620B5F929B25E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CE2849E00ABE5AEC906333BA20B10F8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-iCycle.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3DCAB2B7CDE207B3958B6CB957FCC758</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E90F927F7D8E062780481A150CFFA07</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MySqlSwiftNative.framework</string>
+			<key>path</key>
+			<string>MySqlSwiftNative.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>46A04B3320FE0ADB1F7C597E74521BCD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MySqlSwiftNative-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>47A1936349BD83CF654C9285DC7D903C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9BA8DBC9829BFB8EBAFFE8EE86B1BC99</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4C06AE55E90954E2E3D688DEA1E20B8B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>67FE2858415A58DB60E267BF7253678B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4C4F8958C70F1B9FF07994C27E3198E0</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E8447EA32D776B7755C247232EB45D5C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-iCycle/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-iCycle/Pods-iCycle.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_iCycle</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4D00BA6B4230F93C956A0DC1D85AF4DE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>38A1FFEBC11E826222C4C073D1E73791</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MySqlSwiftNative/MySqlSwiftNative-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/MySqlSwiftNative/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/MySqlSwiftNative/MySqlSwiftNative.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>MySqlSwiftNative</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4D298BC1CAC4F76095BE681E72759785</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MySqlSwiftNative-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>552325152C0D4098BB06DE6B5A6D3CAE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BF657E25A83BFC8FDA4D87FFA0893E94</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>575DB964C7AFC88AD386450CEEC7410B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3E90F927F7D8E062780481A150CFFA07</string>
+				<string>D263EF5D6D49EF9F6F7E362B85D5F9DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>59956BB8D0281A9A99F3806587D94250</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Socket.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Socket.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>59EFEC0F8AD6904F0A3FC18DC8EEBB07</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>47A1936349BD83CF654C9285DC7D903C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5B54EF1EB413DBF17D2590DD07088B6C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9F67B0F0E6D550A75BAB4DA5B8D21A52</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5D089FCC2F495A04450F9CECE342CC77</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-iCycle-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5E8B52659A82E155131CBEFC3645E33F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-iCycle-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>64ACF8B416A81F6763F1FE5B1C84ED48</key>
+		<dict>
+			<key>fileRef</key>
+			<string>59956BB8D0281A9A99F3806587D94250</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>67FE2858415A58DB60E267BF7253678B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>sha1.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/sha1.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6B92510FCBFA724F0EEE2EB8996E99E0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>78B6A08076D319C7458CDC5A21EE26B6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6F2474A67EB8FB9C788D67907E2D634B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CC93986F32A98269B2DAAC53587E062B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>74EB33FE8A7DB71F3ADB67E500231239</key>
+		<dict>
+			<key>fileRef</key>
+			<string>075854AEBDABFF7CAF1B6517F1A95D3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>76FC7F57882BA00442FAD32BE553491C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FDE60B661890BD712612674B9E36178C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>772C719284442372A80879E1F253DA47</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D9364474FB8F68722A074A9431A5C812</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>78B6A08076D319C7458CDC5A21EE26B6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
+				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
+				<string>1D6C77E13037458634853A6F8D0F9E0F</string>
+				<string>575DB964C7AFC88AD386450CEEC7410B</string>
+				<string>85639517FE03414E2047786551A70851</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>85639517FE03414E2047786551A70851</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CCBC37316FA706EE9EAA66839136E087</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8E059E087CA9C1E41851E9862E1AA840</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9B79E3945AC62AB91530431B09559DF8</string>
+			<key>buildPhases</key>
+			<array>
+				<string>EBC6F3B2FF64C6315D3144A620187095</string>
+				<string>C205C420F899CA994587139F1FFED9BA</string>
+				<string>59EFEC0F8AD6904F0A3FC18DC8EEBB07</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>C0AF665CDA62F8E7E76C55956CFE2E28</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-iCycle</string>
+			<key>productName</key>
+			<string>Pods-iCycle</string>
+			<key>productReference</key>
+			<string>D263EF5D6D49EF9F6F7E362B85D5F9DC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>9089B2FE6A194D828BAFA65A05315F5A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0917C1212F012ED563C6F8E404723663</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>text.script.ruby</string>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>9474FCD7C6999BF11A1864C22AC809EB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-iCycle.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9B79E3945AC62AB91530431B09559DF8</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4C4F8958C70F1B9FF07994C27E3198E0</string>
+				<string>26F9F6F1358A993CD4D52F36F68B5BF5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9BA8DBC9829BFB8EBAFFE8EE86B1BC99</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-iCycle-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F67B0F0E6D550A75BAB4DA5B8D21A52</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Result.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Result.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2808C8F43952A6DE6B8D48205433DEF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0D6951C7DFBFD6380C573F7A16A19C97</string>
+				<string>4D00BA6B4230F93C956A0DC1D85AF4DE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3DCAB2B7CDE207B3958B6CB957FCC758</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BF657E25A83BFC8FDA4D87FFA0893E94</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Constants.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Constants.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C0AF665CDA62F8E7E76C55956CFE2E28</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MySqlSwiftNative</string>
+			<key>target</key>
+			<string>CCF23F1823862AA0CD0B5BEE7627D4F8</string>
+			<key>targetProxy</key>
+			<string>14CEF8B77C66E864D8568C1509F447E1</string>
+		</dict>
+		<key>C1A04A1FEEDAA8DF696A0A4098065A83</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Utils.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Utils.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C205C420F899CA994587139F1FFED9BA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E3B50E1729DF44FA055A0B03AF3646C9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C2F6A68D4486D75E865B4A84BD4F75AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>46A04B3320FE0ADB1F7C597E74521BCD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7E474A03CAE21F1CB6046E7344C59BD</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_RELEASE=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C97BC46E81DE8D17A88E4B665F0727F1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFBFB74B3F9E0E9A7BE16505AF6A4E10</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CBC64CB1EBB2A948EC34F27134E189D3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-iCycle-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CC93986F32A98269B2DAAC53587E062B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Packets.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Packets.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCBC37316FA706EE9EAA66839136E087</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3A1467EE98C71DCDD6D620B5F929B25E</string>
+				<string>9474FCD7C6999BF11A1864C22AC809EB</string>
+				<string>5E8B52659A82E155131CBEFC3645E33F</string>
+				<string>5D089FCC2F495A04450F9CECE342CC77</string>
+				<string>E224ED165FBEDEDE5D8A8B9914265093</string>
+				<string>EB740139521A0A075FFEDE907BF60F8F</string>
+				<string>CBC64CB1EBB2A948EC34F27134E189D3</string>
+				<string>9BA8DBC9829BFB8EBAFFE8EE86B1BC99</string>
+				<string>E8447EA32D776B7755C247232EB45D5C</string>
+				<string>3CE2849E00ABE5AEC906333BA20B10F8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-iCycle</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-iCycle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCF23F1823862AA0CD0B5BEE7627D4F8</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>A2808C8F43952A6DE6B8D48205433DEF</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E0013B955479914783B9A14AC9470DF5</string>
+				<string>6B92510FCBFA724F0EEE2EB8996E99E0</string>
+				<string>2FB698059C44FF620616AC1A3CD3CB98</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>MySqlSwiftNative</string>
+			<key>productName</key>
+			<string>MySqlSwiftNative</string>
+			<key>productReference</key>
+			<string>3E90F927F7D8E062780481A150CFFA07</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>CEC22C73C1608DFA5D5D78BDCB218219</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>CFE8E88D7E79E635F4938B7DDEF8974C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>Query.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/Query.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D10EC76A68890F9CC8BCEA1CC6B88F18</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C1A04A1FEEDAA8DF696A0A4098065A83</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1D500F4AFC361D9635B813D026D0467</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0917C1212F012ED563C6F8E404723663</string>
+				<string>BF657E25A83BFC8FDA4D87FFA0893E94</string>
+				<string>281904C749E33EDB1696188845C3FE76</string>
+				<string>EFBFB74B3F9E0E9A7BE16505AF6A4E10</string>
+				<string>CC93986F32A98269B2DAAC53587E062B</string>
+				<string>CFE8E88D7E79E635F4938B7DDEF8974C</string>
+				<string>9F67B0F0E6D550A75BAB4DA5B8D21A52</string>
+				<string>67FE2858415A58DB60E267BF7253678B</string>
+				<string>59956BB8D0281A9A99F3806587D94250</string>
+				<string>075854AEBDABFF7CAF1B6517F1A95D3A</string>
+				<string>2C1200B69A76A3AD696A6A5CF3290910</string>
+				<string>D9364474FB8F68722A074A9431A5C812</string>
+				<string>C1A04A1FEEDAA8DF696A0A4098065A83</string>
+				<string>F3E85DBCFB6F3A670B120B3D55FAFC5D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MySqlSwiftNative</string>
+			<key>path</key>
+			<string>MySqlSwiftNative</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D23B1DA1CB15D6ED71D828D17E54CE7C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E224ED165FBEDEDE5D8A8B9914265093</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D263EF5D6D49EF9F6F7E362B85D5F9DC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_iCycle.framework</string>
+			<key>path</key>
+			<string>Pods-iCycle.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>575DB964C7AFC88AD386450CEEC7410B</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>CCF23F1823862AA0CD0B5BEE7627D4F8</string>
+				<string>8E059E087CA9C1E41851E9862E1AA840</string>
+			</array>
+		</dict>
+		<key>D9364474FB8F68722A074A9431A5C812</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>tests.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/tests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E0013B955479914783B9A14AC9470DF5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9089B2FE6A194D828BAFA65A05315F5A</string>
+				<string>552325152C0D4098BB06DE6B5A6D3CAE</string>
+				<string>E2CF1763A9D75264B9EF1565D1B00F62</string>
+				<string>C97BC46E81DE8D17A88E4B665F0727F1</string>
+				<string>C2F6A68D4486D75E865B4A84BD4F75AF</string>
+				<string>6F2474A67EB8FB9C788D67907E2D634B</string>
+				<string>F1239C46477C2FC8F8168AAD88C6ACFE</string>
+				<string>5B54EF1EB413DBF17D2590DD07088B6C</string>
+				<string>4C06AE55E90954E2E3D688DEA1E20B8B</string>
+				<string>64ACF8B416A81F6763F1FE5B1C84ED48</string>
+				<string>74EB33FE8A7DB71F3ADB67E500231239</string>
+				<string>1BF6710739B6341A2E188BF84044E3DE</string>
+				<string>772C719284442372A80879E1F253DA47</string>
+				<string>D10EC76A68890F9CC8BCEA1CC6B88F18</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E224ED165FBEDEDE5D8A8B9914265093</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-iCycle-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E2CF1763A9D75264B9EF1565D1B00F62</key>
+		<dict>
+			<key>fileRef</key>
+			<string>281904C749E33EDB1696188845C3FE76</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E3B50E1729DF44FA055A0B03AF3646C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E8447EA32D776B7755C247232EB45D5C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-iCycle.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EB740139521A0A075FFEDE907BF60F8F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-iCycle-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EBC6F3B2FF64C6315D3144A620187095</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D23B1DA1CB15D6ED71D828D17E54CE7C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EEFB2F9318A5A5074E18873BA6970E5E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFBFB74B3F9E0E9A7BE16505AF6A4E10</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>mysql.swift</string>
+			<key>path</key>
+			<string>Sources/MySqlSwiftNative/mysql.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F1239C46477C2FC8F8168AAD88C6ACFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CFE8E88D7E79E635F4938B7DDEF8974C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F3E85DBCFB6F3A670B120B3D55FAFC5D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EEFB2F9318A5A5074E18873BA6970E5E</string>
+				<string>2AF419DDE42535660CEF56802CB56D14</string>
+				<string>38A1FFEBC11E826222C4C073D1E73791</string>
+				<string>46A04B3320FE0ADB1F7C597E74521BCD</string>
+				<string>4D298BC1CAC4F76095BE681E72759785</string>
+				<string>FDE60B661890BD712612674B9E36178C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MySqlSwiftNative</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FDE60B661890BD712612674B9E36178C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MySqlSwiftNative-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>

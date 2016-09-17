@@ -4,5 +4,4 @@ iCycle/iCycle.xcodeproj/project.pbxproj
 **/.DS_Store
 *.xcuserstate
 **/iCycle.xcworkspace
-**/Podfile.lock
 
