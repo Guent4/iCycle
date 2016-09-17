@@ -9,6 +9,7 @@ target 'iCycle' do
   pod 'Alamofire', '~> 3.0'
   pod 'MySqlSwiftNative', '~> 1.0.6'
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  pod 'Charts'
   #pod 'CommonCrypto', '~> 1.1'
 
 end

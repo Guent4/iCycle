@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="OLe-Pf-Bop">
             <objects>
-                <viewController id="8zY-xj-K27" customClass="FirstViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8zY-xj-K27" customClass="HomeViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wc0-Ld-uLv"/>
                         <viewControllerLayoutGuide type="bottom" id="T5p-S6-kNp"/>
@@ -149,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="717" y="-21"/>
         </scene>
-        <!--Camera-->
+        <!--Scanner-->
         <scene sceneID="uq1-gC-z62">
             <objects>
-                <viewController id="CRK-g2-eJO" customClass="SecondViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Scanner" id="CRK-g2-eJO" customClass="ScannerViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7h8-Ih-9B1"/>
                         <viewControllerLayoutGuide type="bottom" id="xKe-5K-dCq"/>
@@ -169,7 +169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-Fr-2OB">
-                                <rect key="frame" x="20" y="46" width="568" height="505"/>
+                                <rect key="frame" x="20" y="37" width="560" height="514"/>
                                 <connections>
                                     <segue destination="QFL-jc-USz" kind="embed" id="bB2-0C-3J0"/>
                                 </connections>
@@ -179,13 +179,13 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="zCe-Fr-2OB" secondAttribute="trailing" id="BDi-S2-dCk"/>
                             <constraint firstItem="xKe-5K-dCq" firstAttribute="top" secondItem="zCe-Fr-2OB" secondAttribute="bottom" id="FE4-CN-4gd"/>
+                            <constraint firstItem="zCe-Fr-2OB" firstAttribute="top" secondItem="7h8-Ih-9B1" secondAttribute="bottom" constant="30" id="Fmk-tj-zyf"/>
                             <constraint firstAttribute="centerY" secondItem="lT3-Bv-xT4" secondAttribute="centerY" id="Tng-gk-Xx1"/>
                             <constraint firstAttribute="centerX" secondItem="lT3-Bv-xT4" secondAttribute="centerX" id="VDy-sH-hO3"/>
                             <constraint firstItem="zCe-Fr-2OB" firstAttribute="leading" secondItem="BPG-7w-Bs0" secondAttribute="leadingMargin" id="XNh-re-xDy"/>
-                            <constraint firstItem="zCe-Fr-2OB" firstAttribute="top" secondItem="7h8-Ih-9B1" secondAttribute="bottom" constant="26" id="qaa-7i-pWJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" image="Screenshot Filled-30" id="aX5-qX-8ZL"/>
+                    <tabBarItem key="tabBarItem" title="Scanner" image="Screenshot Filled-30" id="aX5-qX-8ZL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKf-R5-as9" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,8 +216,12 @@
         <scene sceneID="HO0-WN-llD">
             <objects>
                 <viewController id="QFL-jc-USz" customClass="BarcodeReaderViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dNA-DU-OCP"/>
+                        <viewControllerLayoutGuide type="bottom" id="5ur-0b-NjQ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VGg-M7-oC7">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="505"/>
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="514"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
