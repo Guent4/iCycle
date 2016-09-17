@@ -8,7 +8,7 @@
 
 import UIKit
 import MySqlSwiftNative
-
+import CommonCrypto
 
 class ViewController: UIViewController {
     
