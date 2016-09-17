@@ -1,0 +1,14 @@
+# Uncomment this line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+target 'iCycle' do
+  use_frameworks!
+
+  pod 'Alamofire', '~> 3.0'
+
+  target ‘CDBarcodes’ do
+  	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  end
+
+end
