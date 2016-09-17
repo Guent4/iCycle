@@ -13,7 +13,7 @@
 		6AF313581D8CC70A007BDB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF313561D8CC70A007BDB1E /* Main.storyboard */; };
 		6AF3135A1D8CC70A007BDB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AF313591D8CC70A007BDB1E /* Assets.xcassets */; };
 		6AF3135D1D8CC70A007BDB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF3135B1D8CC70A007BDB1E /* LaunchScreen.storyboard */; };
-		6AF313651D8CD4EB007BDB1E /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF313641D8CD4EB007BDB1E /* Scanner.swift */; };
+		6AF313651D8CD4EB007BDB1E /* BarcodeReaderviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF313641D8CD4EB007BDB1E /* BarcodeReaderviewController.swift */; };
 		C83AF2C087669D0C3253E7A5 /* Pods_iCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622BC28C07BE1AF123452290 /* Pods_iCycle.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		6AF313591D8CC70A007BDB1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AF3135C1D8CC70A007BDB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AF3135E1D8CC70A007BDB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AF313641D8CD4EB007BDB1E /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		6AF313641D8CD4EB007BDB1E /* BarcodeReaderviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeReaderviewController.swift; sourceTree = "<group>"; };
 		845A2CA31D8DA5600038BC14 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		9F8DDDA3A8D0C0B097DD51B9 /* Pods-iCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCycle.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCycle/Pods-iCycle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +71,7 @@
 				6AF313541D8CC70A007BDB1E /* ViewController.swift */,
 				845A2CA31D8DA5600038BC14 /* BridgingHeader.h */,
 				6AF313561D8CC70A007BDB1E /* Main.storyboard */,
-				6AF313641D8CD4EB007BDB1E /* Scanner.swift */,
+				6AF313641D8CD4EB007BDB1E /* BarcodeReaderviewController.swift */,
 				6AF313591D8CC70A007BDB1E /* Assets.xcassets */,
 				6AF3135B1D8CC70A007BDB1E /* LaunchScreen.storyboard */,
 				6AF3135E1D8CC70A007BDB1E /* Info.plist */,
@@ -131,6 +131,7 @@
 				TargetAttributes = {
 					6AF3134E1D8CC70A007BDB1E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YCB8DBCA76;
 					};
 				};
 			};
@@ -220,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AF313551D8CC70A007BDB1E /* ViewController.swift in Sources */,
-				6AF313651D8CD4EB007BDB1E /* Scanner.swift in Sources */,
+				6AF313651D8CD4EB007BDB1E /* BarcodeReaderviewController.swift in Sources */,
 				6AF313531D8CC70A007BDB1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,10 +337,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.GSR.iCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = GSR.iCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = iCycle/BridgingHeader.h;
 			};
 			name = Debug;
@@ -350,10 +354,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.GSR.iCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = GSR.iCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = iCycle/BridgingHeader.h;
 			};
 			name = Release;

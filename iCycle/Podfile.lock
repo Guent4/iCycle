@@ -1,18 +1,27 @@
 PODS:
-  - CommonCrypto (1.1)
-  - MTBBarcodeScanner (2.0.3)
+  - Alamofire (3.5.0)
   - MySqlSwiftNative (1.0.10)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - CommonCrypto (~> 1.1)
-  - MTBBarcodeScanner (~> 2.0)
+  - Alamofire (~> 3.0)
   - MySqlSwiftNative (~> 1.0.6)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 73670b94292b8d8496c398a973f56ac67789ba9f
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  CommonCrypto: e18c8416332cca5efe80c197f2a522d471c42626
-  MTBBarcodeScanner: a05f36125ff8ea48011b84715c5faa10838ddb80
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
   MySqlSwiftNative: 25d6d8c5db9d114a9b839aa5cb7de6d1f460f596
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: cea959f35d2adc1d4d3b8cd36511db65de92cd59
+PODFILE CHECKSUM: 180398d9d6db756a70d74a0c122e44db01c29b00
 
 COCOAPODS: 1.0.1
