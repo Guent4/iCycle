@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MySqlSwiftNative.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EDFB6D6A2B747BA56E6F92EFCE83777</key>
+		<key>B8F7922FFDED99847A19D71447E775A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6828C2508515BC0428D6BDAA1292DC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F97674C5A9B3A80E331BB83B2AAB62BE</key>
+		<key>D2A7CF66B4361E64F15FD433CBE0C2D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
