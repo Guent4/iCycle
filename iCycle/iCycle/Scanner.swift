@@ -40,7 +40,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if (captureSession.canAddOutput(metadataOutput)) {
             captureSession.addOutput(metadataOutput)
             
-            metadataOutput.setMetadataObjectsDelegate(self, queue: nil)
+            metadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
             metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypePDF417Code]
         } else {
             failed()
