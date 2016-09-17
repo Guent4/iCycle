@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/CommonCrypto/CommonCrypto.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MySqlSwiftNative/MySqlSwiftNative.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/CommonCrypto/CommonCrypto.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MySqlSwiftNative/MySqlSwiftNative.framework"
 fi
