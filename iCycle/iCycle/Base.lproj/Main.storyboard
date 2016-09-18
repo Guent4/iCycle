@@ -358,21 +358,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Camera Page" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lT3-Bv-xT4">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biX-Xu-mTX">
-                                <rect key="frame" x="20" y="20" width="96" height="30"/>
-                                <state key="normal" title="Restart Scan">
-                                    <color key="titleColor" red="0.096107048809999998" green="0.5832583442" blue="0.1540232846" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-Fr-2OB">
-                                <rect key="frame" x="20" y="37" width="560" height="514"/>
+                                <rect key="frame" x="142" y="162" width="361" height="209"/>
                                 <connections>
                                     <segue destination="QFL-jc-USz" kind="embed" id="bB2-0C-3J0"/>
                                 </connections>
@@ -380,15 +367,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zCe-Fr-2OB" firstAttribute="trailing" secondItem="BPG-7w-Bs0" secondAttribute="trailingMargin" id="4db-xm-eGJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zCe-Fr-2OB" secondAttribute="trailing" id="BDi-S2-dCk"/>
-                            <constraint firstItem="xKe-5K-dCq" firstAttribute="top" secondItem="zCe-Fr-2OB" secondAttribute="bottom" id="FE4-CN-4gd"/>
-                            <constraint firstItem="zCe-Fr-2OB" firstAttribute="top" secondItem="7h8-Ih-9B1" secondAttribute="bottom" constant="30" id="Fmk-tj-zyf"/>
-                            <constraint firstAttribute="centerY" secondItem="lT3-Bv-xT4" secondAttribute="centerY" id="Tng-gk-Xx1"/>
-                            <constraint firstAttribute="centerX" secondItem="lT3-Bv-xT4" secondAttribute="centerX" id="VDy-sH-hO3"/>
-                            <constraint firstItem="zCe-Fr-2OB" firstAttribute="leading" secondItem="BPG-7w-Bs0" secondAttribute="leadingMargin" id="XNh-re-xDy"/>
-                            <constraint firstItem="biX-Xu-mTX" firstAttribute="top" secondItem="7h8-Ih-9B1" secondAttribute="bottom" id="jtY-Zw-8V3"/>
-                            <constraint firstItem="biX-Xu-mTX" firstAttribute="leading" secondItem="BPG-7w-Bs0" secondAttribute="leadingMargin" id="tXO-RG-AaF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zCe-Fr-2OB" secondAttribute="trailing" id="2uP-9R-EfQ"/>
+                            <constraint firstItem="zCe-Fr-2OB" firstAttribute="top" secondItem="7h8-Ih-9B1" secondAttribute="bottom" id="M15-UC-loy"/>
+                            <constraint firstItem="xKe-5K-dCq" firstAttribute="top" secondItem="zCe-Fr-2OB" secondAttribute="bottom" id="VRx-NY-34G"/>
+                            <constraint firstItem="zCe-Fr-2OB" firstAttribute="leading" secondItem="BPG-7w-Bs0" secondAttribute="leadingMargin" constant="-20" id="xlz-M0-BAF"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scanner" image="Screenshot Filled-30" id="aX5-qX-8ZL"/>
@@ -427,7 +409,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5ur-0b-NjQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VGg-M7-oC7">
-                        <rect key="frame" x="0.0" y="0.0" width="560" height="514"/>
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

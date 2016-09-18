@@ -160,8 +160,6 @@ class BarcodeReaderViewController: UIViewController, AVCaptureMetadataOutputObje
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)
-        
-        self.viewDidLoad()
     }
     
     private func barcodeHandler(code: String) {
