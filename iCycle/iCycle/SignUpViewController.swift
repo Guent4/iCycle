@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MySqlSwiftNative
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var UsernameText: UITextField!
     @IBOutlet weak var PasswordText: UITextField!
@@ -23,8 +23,26 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var EmailNotMatchLabel: UILabel!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad();
+        UsernameText.delegate = self;
+        PasswordText.delegate = self;
+        ConfPasswordText.delegate = self;
+        EmailText.delegate = self;
+        ConfPasswordText.delegate = self;
+        
+        UsernameText.autocorrectionType = UITextAutocorrectionType.No;
+        PasswordText.autocorrectionType = UITextAutocorrectionType.No;
+        ConfPasswordText.autocorrectionType = UITextAutocorrectionType.No
+        EmailText.autocorrectionType = UITextAutocorrectionType.No;
+        ConfPasswordText.autocorrectionType = UITextAutocorrectionType.No;
+    }
+    
+    func isValidEmail(testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,51 +62,69 @@ class SignUpViewController: UIViewController {
         let confEmail = ConfEmailText.text!;
         
         if (username == "") {
-            
+            UsernameText.becomeFirstResponder();
         } else if (password == "") {
-            
+            PasswordText.becomeFirstResponder();
         } else if (confPassword == "") {
-            
+            ConfPasswordText.becomeFirstResponder();
         } else if (email == "") {
-            
+            EmailText.becomeFirstResponder();
         } else if (confEmail == "") {
-            
+            ConfEmailText.becomeFirstResponder();
         } else {
-            if (password != confPassword || email != confEmail) {
-                PassNotMatchLabel.hidden = (password == confPassword);
-                EmailNotMatchLabel.hidden = (email == confEmail);
-            } else {
-                // Everything is good; might need to check with database
-                let con = MySQL.Connection();
-                let db_name = "iCycle";
+            PassNotMatchLabel.hidden = (password == confPassword);
+            EmailNotMatchLabel.hidden = (email == confEmail);
             
-                do {
-                    try con.open("52.165.33.228", user: "root", passwd: "password");
-                    try con.use(db_name);
-                
-                    // Insert the user; if operation failed, will go to catch
-                    let insert_stmt = try con.prepare("INSERT INTO User(Username,Password,Email) VALUES(?,?,?);");
-                    try insert_stmt.query([username, password, email]);
+            if (password == confPassword && email == confEmail) {
+                if (isValidEmail(email) == false) {
+                    let alert = UIAlertController(title: "Error", message: "Not a valid email address!", preferredStyle: UIAlertControllerStyle.Alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil));
+                    self.presentViewController(alert, animated: true, completion: nil);
+                    EmailText.becomeFirstResponder();
+                } else {
+                    // Everything is good; might need to check with database
+                    let con = MySQL.Connection();
+                    let db_name = "iCycle";
                     
-                    // Get the user information back from the database
-                    let select_stmt = try con.prepare("SELECT * FROM User WHERE (Username=?) AND (Password=?);");
-                    let res = try select_stmt.query([username, password]);
-                    var rows = try res.readAllRows();
+                    do {
+                        try con.open("52.165.33.228", user: "root", passwd: "password");
+                        try con.use(db_name);
                 
-                    if (rows?.count > 0) {
-                        var user = rows![0][0];
-                        UserID = user["UserID"] as! Int;
+                        // Insert the user; if operation failed, will go to catch
+                        let insert_stmt = try con.prepare("INSERT INTO User(Username,Password,Email) VALUES(?,?,?);");
+                        try insert_stmt.query([username, password, email]);
+                    
+                        // Get the user information back from the database
+                        let select_stmt = try con.prepare("SELECT * FROM User WHERE (Username=?) AND (Password=?);");
+                        let res = try select_stmt.query([username, password]);
+                        var rows = try res.readAllRows();
+                
+                        if (rows?.count > 0) {
+                            var user = rows![0][0];
+                            UserID = user["UserID"] as! Int;
                         
-                        // Go to home view
-                        let next = self.storyboard!.instantiateViewControllerWithIdentifier("TabViewController") as UIViewController;
-                        self.presentViewController(next, animated: true, completion: nil);
-                    } else {
-                        print("sign up issue");
+                            // Go to home view
+                            let next = self.storyboard!.instantiateViewControllerWithIdentifier("TabViewController") as UIViewController;
+                            self.presentViewController(next, animated: true, completion: nil);
+                        } else {
+                            print("sign up issue");
+                        }
+                    } catch (let e) {
+                        let alert = UIAlertController(title: "Error", message: "Username is already in use. Please pick a new username!", preferredStyle: UIAlertControllerStyle.Alert);
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil));
+                        self.presentViewController(alert, animated: true, completion: nil);
+                    
+                        print(e)
                     }
-                } catch (let e) {
-                    print(e)
                 }
             }
         }
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if (string == " ") {
+            return false
+        }
+        return true
     }
 }

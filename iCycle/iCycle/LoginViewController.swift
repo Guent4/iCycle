@@ -13,7 +13,7 @@ import Charts
 
 var UserID:Int = 0;
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var UsernameText: UITextField!
     @IBOutlet weak var PasswordText: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
@@ -21,9 +21,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        
+        UsernameText.delegate = self;
+        PasswordText.delegate = self;
+
+        UsernameText.autocorrectionType = UITextAutocorrectionType.No;
+        PasswordText.autocorrectionType = UITextAutocorrectionType.No;
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,8 +65,12 @@ class LoginViewController: UIViewController {
         } catch (let e) {
             print(e)
         }
-
-        
     }
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if (string == " ") {
+            return false
+        }
+        return true
+    }
 }
