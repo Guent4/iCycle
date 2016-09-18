@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
     var destVC: BarChartViewController!
     
     @IBOutlet weak var chartScope: UISegmentedControl!
-    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var timeSinceLastRecycled: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
     override func viewDidLoad() {
@@ -59,8 +58,9 @@ class HomeViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let embeddedVC = segue.destinationViewController as? BarChartViewController where segue.identifier == "EmbedSegue" {
             embeddedVC.viewType = toPass
+            destVC = segue.destinationViewController as! BarChartViewController
         }
-        destVC = segue.destinationViewController as! BarChartViewController
+        
     }
     
     override func didReceiveMemoryWarning() {
