@@ -79,7 +79,27 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         newPassword.autocorrectionType = UITextAutocorrectionType.No;
         newPassConfirm.autocorrectionType = UITextAutocorrectionType.No
         
+        var numHistoryValue = 0
+        if (DefaultCountHistory == 10) {
+            numHistoryValue = 0
+        } else if (DefaultCountHistory == 25) {
+            numHistoryValue = 1
+        } else if (DefaultCountHistory == 50) {
+            numHistoryValue = 2
+        }
         
+        numHistory.selectedSegmentIndex = numHistoryValue
+        
+        var numFriendValue = 0
+        if (DefaultCountFriend == 5) {
+            numFriendValue = 0
+        } else if (DefaultCountFriend == 10) {
+            numFriendValue = 1
+        } else if (DefaultCountFriend == 25) {
+            numFriendValue = 2
+        }	
+        
+        numFriends.selectedSegmentIndex = numFriendValue
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){

@@ -47,6 +47,12 @@ class DataService {
         }
     }
     
+    static func addYourselfAsFriend(userID: Int) {
+        let result = execute(ADD_FRIEND, data: [userID, userID])
+        if result > 0 {
+            print("failed to add yourself as friends")
+        }
+    }
     static func retrieveMostRecentItem(userID : Int) -> Array<Dictionary<String,protocol<>>> {
         return query(GET_MOST_RECENT_ITEM, data: [userID])
     }

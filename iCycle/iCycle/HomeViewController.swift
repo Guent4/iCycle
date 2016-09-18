@@ -12,7 +12,10 @@ import Charts
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var username: UILabel!
+    var toPass: Int = 0
+    var destVC: BarChartViewController!
+    
+    @IBOutlet weak var chartScope: UISegmentedControl!
     @IBOutlet weak var timeSinceLastRecycled: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
     override func viewDidLoad() {
@@ -20,7 +23,6 @@ class HomeViewController: UIViewController {
         let mostRecents = DataService.retrieveMostRecentItem(UserID)
         let users = DataService.retrieveUserByUserID(UserID)
         let user = users[0]
-        username.text = user["Username"] as? String
         if mostRecents.count > 0 {
             // TimeSinceLastRecycled.text = mostRecent["Name"] as? String
             // DataService.retrieveItemsForDay()
@@ -45,6 +47,20 @@ class HomeViewController: UIViewController {
         else {
             timeSinceLastRecycled.text = ""
         }
+    }
+    @IBAction func onChartChange(sender: AnyObject) {
+        toPass = chartScope.selectedSegmentIndex
+        destVC.viewType = toPass
+        destVC.viewDidLoad()
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let embeddedVC = segue.destinationViewController as? BarChartViewController where segue.identifier == "EmbedSegue" {
+            embeddedVC.viewType = toPass
+            destVC = segue.destinationViewController as! BarChartViewController
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

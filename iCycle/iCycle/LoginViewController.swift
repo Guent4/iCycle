@@ -12,6 +12,8 @@ import MySqlSwiftNative
 import Charts
 
 var UserID:Int = 0;
+var DefaultCountHistory = 0;
+var DefaultCountFriend = 0;
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var UsernameText: UITextField!
@@ -48,7 +50,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if (rows.count > 0) {
             var user = rows[0];
             UserID = user["UserID"] as! Int;
-            
+            DefaultCountHistory = user["DefaultCountHistory"] as! Int
+            DefaultCountFriend = user["DefaultFriendHistory"] as! Int
             // Go to home view
             let next = self.storyboard!.instantiateViewControllerWithIdentifier("TabViewController") as UIViewController;
             self.presentViewController(next, animated: true, completion: nil);
