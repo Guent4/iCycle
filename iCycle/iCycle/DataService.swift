@@ -94,6 +94,10 @@ class DataService {
     static func retrieveRecyclersByBarcode(barcode : String) -> Array<Dictionary<String,protocol<>>>{
         return query(GET_RECYCLERS, data: [barcode])
     }
+    	
+    static func retrieveLeaderBoard(userID : Int, limit : Int) -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_LEADERBOARD, data: [userID, userID, limit])
+    }
     
     static func execute(query: String, data: Array<Any> = []) -> Int {
         let con = MySQL.Connection()

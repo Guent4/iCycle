@@ -34,6 +34,8 @@ let GET_RECENT_ITEMS = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON
 let ADD_FRIEND = "INSERT INTO iCycle.Friendship (RequesterID, RequesteeID) VALUES (?,?)"
 let GET_FRIENDS = "SELECT * FROM FRIENDSHIP WHERE requesterID = ? or requesteeID = ?"
 
+let GET_LEADERBOARD = "SELECT UserData.Username, Data.Count FROM (SELECT R.UserID, R.Count FROM ((SELECT RequesteeID AS UserID FROM iCycle.Friendship WHERE RequesterID=?) UNION DISTINCT (SELECT RequesterID AS UserID FROM iCycle.Friendship WHERE RequesteeID=?)) AS Friend INNER JOIN (SELECT UserID, COUNT(*) As Count FROM iCycle.Recycling GROUP BY UserID) AS R ON Friend.UserID = R.UserID ORDER BY R.Count DESC LIMIT ?) AS Data INNER JOIN (SELECT UserID, Username FROM iCycle.User) AS UserData WHERE Data.UserID = UserData.UserID;"
+
 let GET_USER_BY_USERID = "SELECT * FROM iCycle.User WHERE UserID = ?"
 let GET_USER_BY_USERNAME = "SELECT * FROM iCycle.User WHERE Username = ?"
 
