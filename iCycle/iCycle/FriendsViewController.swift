@@ -11,6 +11,14 @@ import UIKit
 
 class FriendsViewController: UIViewController {
     
+    @IBOutlet weak var userAdd: UITextField!
+    
+    @IBAction func addPressed(sender: AnyObject) {
+        let text: String! = userAdd.text
+        let users = DataService.retrieveUserByUsername(text!)
+        let user = users[0]
+        DataService.addFriend(UserID, friendID: user["UserID"] as! Int)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
