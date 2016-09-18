@@ -78,9 +78,6 @@ class SignUpViewController: UIViewController {
                     if (rows?.count > 0) {
                         var user = rows![0][0];
                         UserID = user["UserID"] as! Int;
-                    
-                        // Dismiss the modal
-                        self.dismissViewControllerAnimated(true, completion: nil);
                         
                         // Go to home view
                         let next = self.storyboard!.instantiateViewControllerWithIdentifier("TabViewController") as UIViewController;
