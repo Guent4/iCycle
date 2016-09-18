@@ -1,0 +1,1 @@
+ const unsigned char MySqlSwiftNativeVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:MySqlSwiftNative  PROJECT:Pods-1" "\n"; const double MySqlSwiftNativeVersionNumber __attribute__ ((used)) = (double)1.;

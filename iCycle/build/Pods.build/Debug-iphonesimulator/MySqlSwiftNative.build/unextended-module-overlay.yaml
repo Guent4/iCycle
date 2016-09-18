@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/gauthamsezhian/Desktop/iCycle/iCycle/build/Debug-iphonesimulator/MySqlSwiftNative/MySqlSwiftNative.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/gauthamsezhian/Desktop/iCycle/iCycle/build/Pods.build/Debug-iphonesimulator/MySqlSwiftNative.build/unextended-module.modulemap',
+    }]
+  }]
+}

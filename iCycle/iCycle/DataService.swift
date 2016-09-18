@@ -16,22 +16,18 @@ class DataService {
     
     static let dataService = DataService()
     
-    static func registerItem(codeNumber: String) {
-        let upcURL = "http://api.upcdatabase.org/json/8e60c246584c5ee113c65a4fb534a14a/"+codeNumber
+    static func registerItem(code: String) {
+        let upcURL = String(format: "http://api.upcdatabase.org/json/%@/%@", API_KEY, code)
         Alamofire.request(.GET, upcURL)
-            .responseJSON { response in
+            .responseJSON {response in
                 var json = JSON(response.result.value!)
                 let description = "\(json["description"])"
-                let con = MySQL.Connection();
-                let db_name = "iCycle";
+                let con = MySQL.Connection()
                 do {
-                    try con.open("52.165.33.228", user: "root", passwd: "password");
-                    try con.use(db_name);
-                    print(codeNumber);
-                    print(description);
-                    let ins_stmt = try con.prepare("INSERT INTO Item (Barcode, Name, RegistrationDate) VALUES (?,?,?)");
-                    try ins_stmt.exec([codeNumber, description, NSDate()]);
-
+                    try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
+                    try con.use(DB_NAME)
+                    let ins_stmt = try con.prepare("INSERT INTO Item (Barcode, Name, RegistrationDate) VALUES (?,?,?)")
+                    try ins_stmt.exec([code, description, NSDate()])
                 }
                 catch (let e) {
                     print(e)
@@ -39,7 +35,48 @@ class DataService {
         }
     }
     
-    static func retrieveItems() {
-        
+    static func retrieveItemsForDay() {
+        let con = MySQL.Connection();
+        do {
+            try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
+            try con.use(DB_NAME)
+            let select_stmt = try con.prepare(GET_ITEMS_WITHIN_DAY)
+            let res = try select_stmt.query([])
+            let rows = try res.readAllRows()
+            print(rows);
+        }
+        catch (let e) {
+            print(e)
+        }
+    }
+
+    static func retrieveItemsForWeek() {
+        let con = MySQL.Connection()
+        do {
+            try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
+            try con.use(DB_NAME)
+            let select_stmt = try con.prepare(GET_ITEMS_WITHIN_WEEK)
+            let res = try select_stmt.query([])
+            let rows = try res.readAllRows()
+            print(rows)
+        }
+        catch (let e) {
+            print(e)
+        }
+    }
+
+    static func retrieveItemsForMonth() {
+        let con = MySQL.Connection();
+        do {
+            try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
+            try con.use(DB_NAME)
+            let select_stmt = try con.prepare(GET_ITEMS_WITHIN_MONTH)
+            let res = try select_stmt.query([])
+            let rows = try res.readAllRows()
+            print(rows)
+        }
+        catch (let e) {
+            print(e)
+        }
     }
 }
