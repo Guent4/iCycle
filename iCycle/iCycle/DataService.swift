@@ -48,7 +48,7 @@ class DataService {
     }
     
     static func getRecyclingFromNDaysAgo(userID: Int,  daysAgo: Int) -> Array<Dictionary<String,protocol<>>> {
-        return query(GET_ITEMS_N_DAY_AGO, data: [daysAgo, userID])
+        return query(GET_RECYCLING_FROM_N_DAY_AGO, data: [daysAgo, userID])
     }
 
     
