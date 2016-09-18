@@ -12,16 +12,20 @@ import Charts
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var TimeSinceLastRecycled: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // let mostRecent = DataService.retrieveMostRecentItem()[0]
+        // TimeSinceLastRecycled.text = mostRecent["Name"] as? String
+        // DataService.retrieveItemsForDay()
+        // DataService.retrieveItemsForWeek()
+        // DataService.retrieveItemsForMonth()
         // Do any additional setup after loading the view, typically from a nib.
-        
         print(UserID);
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
