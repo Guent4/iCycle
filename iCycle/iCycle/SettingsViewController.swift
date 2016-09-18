@@ -9,14 +9,15 @@
 import Foundation
 import UIKit
 
-class SettingsViewController: UIViewController, UITextFieldDelegate{
+class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var oldPassword: UITextField!
     @IBOutlet weak var newPassword: UITextField!
-    
     @IBOutlet weak var newPassConfirm: UITextField!
-    
     @IBOutlet weak var PassNotMatchLabel: UILabel!
+    @IBOutlet weak var numHistory: UISegmentedControl!
+    @IBOutlet weak var numFriends: UISegmentedControl!
+    
     @IBAction func changePassword(sender: AnyObject) {
         let oldPass = oldPassword.text!;
         let newPass = newPassword.text!;
@@ -29,15 +30,31 @@ class SettingsViewController: UIViewController, UITextFieldDelegate{
         } else if (newPassConf == "") {
             newPassConfirm.becomeFirstResponder();
         } else {
-            //PassNotMatchLabel.hidden = (newPass == newPassConf);
+            PassNotMatchLabel.hidden = (newPass == newPassConf);
             
-            //check oldPass with DB password, and then insert new password into DB, also create variable for PassNotMatchLabel
+            // Make sure that the new password and the confirm password are the same
+            if (newPass == newPassConf) {
+                if (DataService.checkPassword(UserID, password: oldPass).count > 0) {
+                    DataService.updatePassword(UserID, newPassword: newPass)
+                    
+                    // Clear the fields
+                    oldPassword.text = "";
+                    newPassword.text = "";
+                    newPassConfirm.text = "";
+                    
+                    // Alert user that the password was successfully updated
+                    let alert = UIAlertController(title: "Success", message: "Password was successfully updated!", preferredStyle: UIAlertControllerStyle.Alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil));
+                    self.presentViewController(alert, animated: true, completion: nil);
+                } else {
+                    // Password was not able to be updated
+                    let alert = UIAlertController(title: "Error", message: "Unable to update password.", preferredStyle: UIAlertControllerStyle.Alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil));
+                    self.presentViewController(alert, animated: true, completion: nil);
+                }
+            }
         }
-        
     }
-    @IBOutlet weak var numHistory: UISegmentedControl!
-    
-    @IBOutlet weak var numFriends: UISegmentedControl!
 
     //Link this IBAction to the button
     @IBAction func updateSettings(sender: UIButton){
@@ -73,5 +90,12 @@ class SettingsViewController: UIViewController, UITextFieldDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if (string == " ") {
+            return false
+        }
+        return true
     }
 }

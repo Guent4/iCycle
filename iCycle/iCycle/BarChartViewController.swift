@@ -20,7 +20,7 @@ class BarChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         if (viewType == 0) {
             interval = ["0000-0259", "0300-0559", "0600-0859", "0900-1159", "1200-1459", "1500-1759", "1800-2059", "2100-2359"]
             unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0]
