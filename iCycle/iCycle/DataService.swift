@@ -35,36 +35,38 @@ class DataService {
         }
     }
     
-    static func retrieveMostRecentItem() -> Array<Dictionary<String,protocol<>>> {
-        return query(GET_MOST_RECENT_ITEM, data: [-1])
+    static func retrieveMostRecentItem(userID : String) -> Array<Dictionary<String,protocol<>>> {
+        return query(GET_MOST_RECENT_ITEM, data: [userID])
     }
 
-    static func retrieveItemsForDay() -> Array<Dictionary<String,protocol<>>>{
-        return query(GET_ITEMS_WITHIN_DAY, data: [-1])
+    static func retrieveItemsForDay(userID : String) -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_ITEMS_WITHIN_DAY, data: [userID])
     }
 
-    static func retrieveItemsForWeek() -> Array<Dictionary<String,protocol<>>>{
-        return query(GET_ITEMS_WITHIN_WEEK, data: [-1])
+    static func retrieveItemsForWeek(userID : Int) -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_ITEMS_WITHIN_WEEK, data: [userID])
     }
 
-    static func retrieveItemsForMonth() -> Array<Dictionary<String,protocol<>>>{
-        return query(GET_ITEMS_WITHIN_MONTH, data: [-1])
+    static func retrieveItemsForMonth(userID : Int) -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_ITEMS_WITHIN_MONTH, data: [userID])
     }
     
-    static func addFriend(friendID : Int) {
-        let result = execute(ADD_FRIEND, data: [-1, friendID])
+    static func addFriend(userID: Int, friendID : Int) {
+        let result = execute(ADD_FRIEND, data: [userID, friendID])
         if result > 0 {
             print("failed to add friend")
-            return;
         }
     }
     
-    static func retrieveFriends() -> Array<Dictionary<String,protocol<>>>{
-        return query(GET_FRIENDS, data: [-1, -1])
+    static func retrieveFriends(userID : Int) -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_FRIENDS, data: [userID, userID])
     }
     
-    static func retrieveAllUsers() -> Array<Dictionary<String,protocol<>>>{
-        return query(GET_ALL_USERS)
+    static func updatePassword(userID : Int, password : String) {
+        let result = execute(UPDATE_PASSWORD, data: [userID, password])
+        if result > 0 {
+            print("failed to update password")
+        }
     }
     
     static func execute(query: String, data: Array<Any> = []) -> Int {

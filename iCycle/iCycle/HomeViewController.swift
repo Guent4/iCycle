@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
         // DataService.retrieveItemsForDay()
         // DataService.retrieveItemsForWeek()
         // DataService.retrieveItemsForMonth()
+        // Do any additional setup after loading the view, typically from a nib.
+        print(UserID);
     }
     
     override func didReceiveMemoryWarning() {
