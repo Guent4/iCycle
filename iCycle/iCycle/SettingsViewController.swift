@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var newPassConfirm: UITextField!
     
+    @IBOutlet weak var PassNotMatchLabel: UILabel!
     @IBAction func changePassword(sender: AnyObject) {
         let oldPass = oldPassword.text!;
         let newPass = newPassword.text!;

@@ -191,19 +191,19 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter OLD Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVl-Sa-4u2">
                                 <rect key="frame" x="20" y="99" width="152" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter NEW Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbe-hp-Z40">
                                 <rect key="frame" x="20" y="137" width="152" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm NEW Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNK-PI-xa2">
                                 <rect key="frame" x="20" y="175" width="170" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New passwords do not match!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ue-ti-R5K">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New passwords do not match!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ue-ti-R5K">
                                 <rect key="frame" x="20" y="213" width="229" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.89407051280000005" green="0.2437717425" blue="0.27717110369999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -250,6 +250,9 @@
                                 <state key="normal" title="Update">
                                     <color key="titleColor" red="0.096107048809999998" green="0.5832583442" blue="0.1540232846" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateSettings:" destination="1hJ-7k-KIA" eventType="touchUpInside" id="HqZ-Pp-Bsg"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-Cv-cx2">
                                 <rect key="frame" x="459" y="271" width="121" height="29"/>
@@ -297,6 +300,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings-30" id="1Cb-VQ-gTf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="PassNotMatchLabel" destination="5Ue-ti-R5K" id="eOV-mG-Ume"/>
                         <outlet property="newPassConfirm" destination="RNK-PI-xa2" id="yyL-po-N9j"/>
                         <outlet property="newPassword" destination="bbe-hp-Z40" id="S6k-vv-kJX"/>
                         <outlet property="numFriends" destination="hzc-5G-pHq" id="YHa-WT-iNR"/>
