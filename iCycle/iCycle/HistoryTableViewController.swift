@@ -11,7 +11,19 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController{
     
+    public var bin = Array<Item>()
+    
     override func viewDidLoad() {
+        let user = DataService.retrieveUserByUserID(UserID)[0]
+        let items = DataService.retrieveMostRecentItems(UserID, count: user["DefaultCountHistory"] as! Int)
+        
+        for item in items {
+            let name = item["Name"] as! String
+            let regDate = item["RecycleDate"] as! NSDate
+            let barcode = item["Barcode"] as! String
+            bin.append(Item(name: name, regDate: regDate, barcode: barcode))
+        }
+        
         tableView.reloadData()
     }
     
@@ -20,14 +32,13 @@ class HistoryTableViewController: UITableViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    let bin = [Item(name: "Dasani - 1L", regDate: NSDate(), barcode: "1234567890"), Item(name: "Red Bull - 250 mL", regDate: NSDate(), barcode: "1234567890"), Item(name: "Nesquick - 300 mL", regDate: NSDate(), barcode: "1234567890"), Item(name: "Gatorade - 20 fl. oz", regDate: NSDate(), barcode: "1234567890"), Item(name: "Poland Springs - 1 gal", regDate: NSDate(), barcode: "1234567890"), Item(name: "Dasani - 500 mL", regDate: NSDate(), barcode: "1234567890")]
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bin.count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! HistoryTableViewCell
         
