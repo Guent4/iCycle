@@ -44,3 +44,5 @@ let GET_RECYCLERS = "SELECT * FROM iCycle.Recycler WHERE Barcode = ?"
 
 var SCAN_STATE = [false, false]
 var SCAN_RECENT = ["", ""]
+
+let GET_RECYCLING_FROM_N_DAY_AGO = "SELECT * FROM iCycle.Recycling WHERE DATEDIFF(DAY, DATEADD(DAY, ? , CURRENT_TIMESTAMP), RecycleDate) = 0 and UserID = ?"

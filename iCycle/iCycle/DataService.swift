@@ -47,6 +47,11 @@ class DataService {
         }
     }
     
+    static func getRecyclingFromNDaysAgo(userID: Int,  daysAgo: Int) -> Array<Dictionary<String,protocol<>>> {
+        return query(GET_ITEMS_N_DAY_AGO, data: [daysAgo, userID])
+    }
+
+    
     static func addYourselfAsFriend(userID: Int) {
         let result = execute(ADD_FRIEND, data: [userID, userID])
         if result > 0 {

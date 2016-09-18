@@ -26,7 +26,15 @@ class BarChartViewController: UIViewController {
             unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0]
         } else if (viewType == 1) {
             interval = ["Day - 6", "Day - 5", "Day - 4", "Day - 3", "Day - 2", "Day - 1", "Today"]
-            unitsSold = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]
+            unitsSold = [
+                DataService.getRecyclingFromNDaysAgo(UserID, -1).count,
+                DataService.getRecyclingFromNDaysAgo(UserID, -2).count,
+                DataService.getRecyclingFromNDaysAgo(UserID, -3).count,
+                DataService.getRecyclingFromNDaysAgo(UserID, -4).count,
+                DataService.getRecyclingFromNDaysAgo(UserID, -5).count,
+                DataService.getRecyclingFromNDaysAgo(UserID, -6).count,
+                DataService.getRecyclingFromNDaysAgo(UserID, -7).count
+            ]
         } else {
             interval = ["3 Wks Ago", "2 Wks Ago", "Last Week", "This Week"]
             unitsSold = [20.0, 4.0, 6.0, 3.0]
