@@ -151,14 +151,42 @@ class BarcodeReaderViewController: UIViewController, AVCaptureMetadataOutputObje
             
             if trimmedCodeString.hasPrefix("0") && trimmedCodeString.characters.count > 1 {
                 trimmedCodeNoZero = String(trimmedCodeString.characters.dropFirst())
-                DataService.recycleItem(trimmedCodeNoZero)
+                self.barcodeHandler(trimmedCodeNoZero)
             } else {
-                DataService.recycleItem(trimmedCode)
+                self.barcodeHandler(trimmedCode)
             }
             
             self.navigationController?.popViewControllerAnimated(true)
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    private func barcodeHandler(code: String) {
+        // determine if is recycler
+        let recyclers = DataService.retrieveRecyclersByBarcode(code)
+        let isRecycler = recyclers.count > 0
+        // if recycler, then change state
+        if isRecycler {
+            print("is recycler")
+            SCAN_STATE = [true, SCAN_STATE[1]]
+            SCAN_RECENT = [code, SCAN_RECENT[1]]
+        }
+        // if not, then change state
+        else {
+            print("is item")
+            SCAN_STATE = [SCAN_STATE[0], true]
+            SCAN_RECENT = [SCAN_RECENT[0], code]
+        }
+        // check if both state is right, if so add item
+        if SCAN_STATE[0] && SCAN_STATE[1] {
+            let recyclerCode = SCAN_RECENT[0]
+            let itemCode = SCAN_RECENT[1]
+            DataService.recycleItem(UserID, itemCode: itemCode, recyclerCode: recyclerCode)
+            SCAN_STATE[0] = false
+            SCAN_STATE[1] = false
+            SCAN_RECENT[0] = ""
+            SCAN_RECENT[1] = ""
+        }
     }
 }

@@ -27,13 +27,18 @@ let INSERT_RECYCLE = "INSERT INTO iCycle.Recycling (UserID, RecyclerID, ItemID, 
 
 let GET_ITEMS_WITHIN_DAY = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON iCycle.Recycling.ItemID = iCycle.Item.ItemID WHERE iCycle.Recycling.UserID = ? AND RegistrationDate > DATE_SUB(NOW(), INTERVAL 1 DAY) ORDER BY RegistrationDate DESC"
 let GET_ITEMS_WITHIN_WEEK = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON iCycle.Recycling.ItemID = iCycle.Item.ItemID WHERE iCycle.Recycling.UserID = ? AND RegistrationDate > DATE_SUB(NOW(), INTERVAL 1 WEEK) ORDER BY RegistrationDate DESC"
-let GET_ITEMS_WITHIN_MONTH = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON iCycle.Recycle.ItemID = iCycle.Item.ItemID WHERE iCycle.Recycling.UserID = ? AND RegistrationDate > DATE_SUB(NOW(), INTERVAL 1 MONTH) ORDER BY RegistrationDate DESC"
-let GET_MOST_RECENT_ITEM = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON iCycle.Recycle.ItemID = iCycle.Item.ItemID WHERE iCycle.Recycling.UserID = ? ORDER BY RecycleDate DESC LIMIT 1"
+let GET_ITEMS_WITHIN_MONTH = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON iCycle.Recycling.ItemID = iCycle.Item.ItemID WHERE iCycle.Recycling.UserID = ? AND RegistrationDate > DATE_SUB(NOW(), INTERVAL 1 MONTH) ORDER BY RegistrationDate DESC"
+let GET_MOST_RECENT_ITEM = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON iCycle.Recycling.ItemID = iCycle.Item.ItemID WHERE iCycle.Recycling.UserID = ? ORDER BY RecycleDate DESC LIMIT 1"
+let GET_RECENT_ITEMS = "SELECT * FROM iCycle.Recycling INNER JOIN iCycle.Item ON iCycle.Recycling.ItemID = iCycle.Item.ItemID WHERE iCycle.Recycling.UserID = ? ORDER BY RecycleDate DESC LIMIT ?"
 
 let ADD_FRIEND = "INSERT INTO iCycle.Friendship (RequesterID, RequesteeID) VALUES (?,?)"
 let GET_FRIENDS = "SELECT * FROM FRIENDSHIP WHERE requesterID = ? or requesteeID = ?"
 
+let GET_USER_BY_USERID = "SELECT * FROM iCycle.User WHERE UserID = ?"
 let GET_USER_BY_USERNAME = "SELECT * FROM iCycle.User WHERE Username = ?"
 
 let ADD_RECYCLER = "INSERT INTO iCycle.Recycler (Barcode, Location) VALUES (?,?)"
-let GET_RECYCLERS = "SELECT * FROM iCycle.Recycler"
+let GET_RECYCLERS = "SELECT * FROM iCycle.Recycler WHERE Barcode = ?"
+
+var SCAN_STATE = [false, false]
+var SCAN_RECENT = ["", ""]
