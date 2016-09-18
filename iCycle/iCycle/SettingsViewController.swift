@@ -32,8 +32,22 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         } else {
             PassNotMatchLabel.hidden = (newPass == newPassConf);
             
+            // Make sure that the new password and the confirm password are the same
             if (newPass == newPassConf) {
-                if (DataService.updatePassword(UserID, oldPassword: oldPass, newPassword: newPass) == 1) {
+                if (DataService.checkPassword(UserID, password: oldPass).count > 0) {
+                    DataService.updatePassword(UserID, newPassword: newPass)
+                    
+                    // Clear the fields
+                    oldPassword.text = "";
+                    newPassword.text = "";
+                    newPassConfirm.text = "";
+                    
+                    // Alert user that the password was successfully updated
+                    let alert = UIAlertController(title: "Success", message: "Password was successfully updated!", preferredStyle: UIAlertControllerStyle.Alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil));
+                    self.presentViewController(alert, animated: true, completion: nil);
+                } else {
+                    // Password was not able to be updated
                     let alert = UIAlertController(title: "Error", message: "Unable to update password.", preferredStyle: UIAlertControllerStyle.Alert);
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil));
                     self.presentViewController(alert, animated: true, completion: nil);

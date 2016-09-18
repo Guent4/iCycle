@@ -20,6 +20,10 @@ class DataService {
         return query(LOGIN, data: [username, password])
     }
     
+    static func checkPassword(userID: Int, password: String) -> Array<Dictionary<String,protocol<>>> {
+        return query(CHECK_PASSWORD, data: [userID, password])
+    }
+    
     static func recycleItem(code: String) {
         let upcURL = String(format: "http://api.upcdatabase.org/json/%@/%@", API_KEY, code)
         Alamofire.request(.GET, upcURL)
@@ -66,8 +70,8 @@ class DataService {
         return query(GET_FRIENDS, data: [userID, userID])
     }
     
-    static func updatePassword(userID : Int, oldPassword: String, newPassword : String) -> Int {
-        let result = execute(UPDATE_PASSWORD, data: [newPassword, userID, oldPassword])
+    static func updatePassword(userID : Int, newPassword : String) -> Int {
+        let result = execute(UPDATE_PASSWORD, data: [newPassword, userID])
         if result > 0 {
             print("failed to update password")
         }
@@ -98,9 +102,12 @@ class DataService {
             let select_stmt = try con.prepare(query)
             let res = try select_stmt.query(data)
             let rows = try res.readAllRows()
-            return rows![0]
-        }
-        catch (let e) {
+            if (rows != nil && rows!.count > 0) {
+                return rows![0]
+            } else {
+                return [];
+            }
+        } catch (let e) {
             print(e)
             return []
         }
