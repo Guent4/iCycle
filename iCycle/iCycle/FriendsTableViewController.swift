@@ -15,12 +15,12 @@ class FriendsTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         let user = DataService.retrieveUserByUserID(UserID)[0]
-        let friends = DataService.retrieveLeaderBoard(UserID, limit: user["DefaultCountFriends"] as! Int)
+        let friends = DataService.retrieveLeaderBoard(UserID, limit: user["DefaultFriendHistory"] as! Int)
         
         var i : Int = 1
         for friend in friends {
             let name = friend["Username"] as! String
-            let count = friend["Count"] as! Int
+            let count = Int(truncatingBitPattern: (friend["Count"] as! Int64))
             bin.append(Friend(name: name, score: count, position: i))
             i = i + 1
         }
