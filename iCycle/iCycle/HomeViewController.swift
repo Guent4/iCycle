@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     var toPass: Int = 0
     var destVC: BarChartViewController!
     
-    @IBOutlet weak var chartScope: UISegmentedControl!
+//    @IBOutlet weak var chartScope: UISegmentedControl!
     @IBOutlet weak var timeSinceLastRecycled: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
     override func viewDidLoad() {
@@ -49,8 +49,8 @@ class HomeViewController: UIViewController {
         }
     }
     @IBAction func onChartChange(sender: AnyObject) {
-        toPass = chartScope.selectedSegmentIndex
-        destVC.viewType = toPass
+//        toPass = chartScope.selectedSegmentIndex
+        destVC.viewType = 1
         destVC.viewDidLoad()
         
     }

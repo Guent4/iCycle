@@ -21,24 +21,24 @@ class BarChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (viewType == 0) {
-            interval = ["0000-0259", "0300-0559", "0600-0859", "0900-1159", "1200-1459", "1500-1759", "1800-2059", "2100-2359"]
-            unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0]
-        } else if (viewType == 1) {
+//        if (viewType == 0) {
+//            interval = ["0000-0259", "0300-0559", "0600-0859", "0900-1159", "1200-1459", "1500-1759", "1800-2059", "2100-2359"]
+//            unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0]
+//        } else if (viewType == 1) {
             interval = ["Day - 6", "Day - 5", "Day - 4", "Day - 3", "Day - 2", "Day - 1", "Today"]
             unitsSold = [
-                DataService.getRecyclingFromNDaysAgo(UserID, -1).count,
-                DataService.getRecyclingFromNDaysAgo(UserID, -2).count,
-                DataService.getRecyclingFromNDaysAgo(UserID, -3).count,
-                DataService.getRecyclingFromNDaysAgo(UserID, -4).count,
-                DataService.getRecyclingFromNDaysAgo(UserID, -5).count,
-                DataService.getRecyclingFromNDaysAgo(UserID, -6).count,
-                DataService.getRecyclingFromNDaysAgo(UserID, -7).count
+                Double(DataService.getRecyclingFromNDaysAgo(UserID, daysAgo: -6).count),
+                Double(DataService.getRecyclingFromNDaysAgo(UserID, daysAgo: -5).count),
+                Double(DataService.getRecyclingFromNDaysAgo(UserID, daysAgo: -4).count),
+                Double(DataService.getRecyclingFromNDaysAgo(UserID, daysAgo: -3).count),
+                Double(DataService.getRecyclingFromNDaysAgo(UserID, daysAgo: -2).count),
+                Double(DataService.getRecyclingFromNDaysAgo(UserID, daysAgo: -1).count),
+                Double(DataService.getRecyclingFromNDaysAgo(UserID, daysAgo: 0).count)
             ]
-        } else {
-            interval = ["3 Wks Ago", "2 Wks Ago", "Last Week", "This Week"]
-            unitsSold = [20.0, 4.0, 6.0, 3.0]
-        }
+//        } else {
+//            interval = ["3 Wks Ago", "2 Wks Ago", "Last Week", "This Week"]
+//            unitsSold = [20.0, 4.0, 6.0, 3.0]
+//        }
         setChart(interval, values: unitsSold)
     }
 
