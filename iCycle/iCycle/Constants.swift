@@ -16,6 +16,8 @@ let DB_NAME = "iCycle"
 let DB_USERNAME = "root"
 let DB_PASSWORD = "password"
 
+let LOGIN = "SELECT * FROM User WHERE (Username=?) AND (Password=?);"
+
 let INSERT_ITEM = "INSERT INTO iCycle.Item (Barcode, Name, RegistrationDate) VALUES (?,?,?)"
 let GET_ITEMS_BY_BARCODE = "SELECT * FROM iCycle.Item WHERE Barcode=?"
 
@@ -34,5 +36,5 @@ let GET_USER_BY_USERNAME = "SELECT * FROM iCycle.User WHERE Username = ?"
 let ADD_RECYCLER = "INSERT INTO iCycle.Recycler (Barcode, Location) VALUES (?,?)"
 let GET_RECYCLERS = "SELECT * FROM iCycle.Recycler"
 
-let UPDATE_PASSWORD = "UPDATE iCycle.User SET password = ? WHERE UserID = ?"
+let UPDATE_PASSWORD = "UPDATE iCycle.User SET Password = ? WHERE UserID = ? AND Password = ?"
 

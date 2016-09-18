@@ -18,7 +18,7 @@ class BarChartViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        barChartView.noDataText = "You need to provide data for the chart."
+//        barChartView.noDataText = "You need to provide data for the chart."
     }
 
     override func didReceiveMemoryWarning() {
