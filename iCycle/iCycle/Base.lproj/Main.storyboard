@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GBG-Fu-b8a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GBG-Fu-b8a">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -222,7 +222,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="XQ3-7h-GIZ">
             <objects>
-                <tabBarController id="hrG-ZF-oo3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabViewController" id="hrG-ZF-oo3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Zxb-GA-AmV">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -428,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="-738" y="-1125"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="74m-Za-hZd">
             <objects>
-                <viewController id="GBG-Fu-b8a" sceneMemberID="viewController">
+                <viewController id="GBG-Fu-b8a" customClass="LoginViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NUD-AN-a36"/>
                         <viewControllerLayoutGuide type="bottom" id="J5C-MM-0KS"/>
@@ -446,7 +446,7 @@
                                     <color key="titleColor" red="0.096107048809999998" green="0.5832583442" blue="0.1540232846" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hrG-ZF-oo3" kind="show" id="AwT-eJ-9GM"/>
+                                    <action selector="loginClick:" destination="GBG-Fu-b8a" eventType="touchUpInside" id="9jh-0r-ibN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlf-YX-MVi">
@@ -471,17 +471,17 @@
                                     <constraint firstAttribute="width" secondItem="N4Z-Ec-dyY" secondAttribute="height" multiplier="64:53" id="y02-n9-QBI"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0i-yf-NDW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="V0i-yf-NDW">
                                 <rect key="frame" x="157" y="203" width="287" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-x9-cV3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-x9-cV3">
                                 <rect key="frame" x="157" y="236" width="287" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password incorrect!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAA-bc-PJm">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password incorrect!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAA-bc-PJm">
                                 <rect key="frame" x="157" y="274" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.89407051280000005" green="0.2437717425" blue="0.27717110369999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -519,6 +519,12 @@
                             <constraint firstItem="N4Z-Ec-dyY" firstAttribute="centerX" secondItem="F4F-fU-uKp" secondAttribute="centerX" id="zdg-pq-fSf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="xQe-Eo-a6i" id="8dm-1T-Alc"/>
+                        <outlet property="PasswordIncorrectLabel" destination="kAA-bc-PJm" id="Y6O-ol-D0d"/>
+                        <outlet property="PasswordText" destination="h8k-x9-cV3" id="KY9-6u-hSK"/>
+                        <outlet property="UsernameText" destination="V0i-yf-NDW" id="13x-Vi-HyJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cN-dR-2Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -532,7 +538,4 @@
         <image name="User Group Man Woman-30" width="30" height="30"/>
         <image name="logo" width="734" height="568"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="AwT-eJ-9GM"/>
-    </inferredMetricsTieBreakers>
 </document>
