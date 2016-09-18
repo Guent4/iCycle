@@ -135,6 +135,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.096107048809999998" green="0.5832583442" blue="0.1540232846" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPressed:" destination="ioF-me-uEB" eventType="touchUpInside" id="DuP-G4-TUA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message (Success/Fail)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQQ-Am-6xh">
                                 <rect key="frame" x="20" y="58" width="184" height="21"/>
@@ -166,10 +169,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Friends" image="User Group Man Woman-30" id="Nah-KJ-lvW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="userAdd" destination="xyu-DH-3UF" id="DYI-G0-IFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMl-bQ-N63" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="-692"/>
+            <point key="canvasLocation" x="651" y="-716"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Rog-zC-RX6">

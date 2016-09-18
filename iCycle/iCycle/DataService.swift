@@ -97,6 +97,10 @@ class DataService {
         return query(GET_USER_BY_USERID, data: [userID])
     }
     
+    static func retrieveUserByUsername(username : String) -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_USER_BY_USERNAME, data: [username])
+    }
+    
     static func retrieveRecyclersByBarcode(barcode : String) -> Array<Dictionary<String,protocol<>>>{
         return query(GET_RECYCLERS, data: [barcode])
     }
