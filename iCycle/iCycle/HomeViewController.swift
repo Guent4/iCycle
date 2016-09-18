@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
         let mostRecents = DataService.retrieveMostRecentItem(UserID)
         let users = DataService.retrieveUserByUserID(UserID)
         let user = users[0]
-        username.text = user["Username"] as? String
         if mostRecents.count > 0 {
             // TimeSinceLastRecycled.text = mostRecent["Name"] as? String
             // DataService.retrieveItemsForDay()

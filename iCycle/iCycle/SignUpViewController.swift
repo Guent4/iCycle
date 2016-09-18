@@ -88,13 +88,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     EmailText.becomeFirstResponder();
                 } else {
                     // Everything is good; might need to check with database
+                    DataService.addYourselfAsFriend(UserID)
+                    
                     let con = MySQL.Connection();
                     let db_name = "iCycle";
                     
                     do {
                         try con.open("52.165.33.228", user: "root", passwd: "password");
                         try con.use(db_name);
-                
+                        
                         // Insert the user; if operation failed, will go to catch
                         let insert_stmt = try con.prepare("INSERT INTO User(Username,Password,Email) VALUES(?,?,?);");
                         try insert_stmt.query([username, password, email]);
