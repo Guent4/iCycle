@@ -16,67 +16,85 @@ class DataService {
     
     static let dataService = DataService()
     
-    static func registerItem(code: String) {
+    static func recycleItem(code: String) {
         let upcURL = String(format: "http://api.upcdatabase.org/json/%@/%@", API_KEY, code)
         Alamofire.request(.GET, upcURL)
             .responseJSON {response in
                 var json = JSON(response.result.value!)
                 let description = "\(json["description"])"
-                let con = MySQL.Connection()
-                do {
-                    try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
-                    try con.use(DB_NAME)
-                    let ins_stmt = try con.prepare("INSERT INTO Item (Barcode, Name, RegistrationDate) VALUES (?,?,?)")
-                    try ins_stmt.exec([code, description, NSDate()])
+                if query(GET_ITEMS_BY_BARCODE, data: [code]).count == 0 {
+                    let result = execute(INSERT_ITEM, data: [code, description])
+                    if result > 0 {
+                        print("failed to insert item")
+                        return;
+                    }
                 }
-                catch (let e) {
-                    print(e)
-                }
+                let items = query(GET_ITEMS_BY_BARCODE)
+                let item = items[0]
+                execute(INSERT_RECYCLE, data: [-1, -1, item["ItemID"], NSDate()])
         }
     }
     
-    static func retrieveItemsForDay() {
-        let con = MySQL.Connection();
-        do {
-            try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
-            try con.use(DB_NAME)
-            let select_stmt = try con.prepare(GET_ITEMS_WITHIN_DAY)
-            let res = try select_stmt.query([])
-            let rows = try res.readAllRows()
-            print(rows);
-        }
-        catch (let e) {
-            print(e)
-        }
+    static func retrieveMostRecentItem() -> Array<Dictionary<String,protocol<>>> {
+        return query(GET_MOST_RECENT_ITEM, data: [-1])
     }
 
-    static func retrieveItemsForWeek() {
+    static func retrieveItemsForDay() -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_ITEMS_WITHIN_DAY, data: [-1])
+    }
+
+    static func retrieveItemsForWeek() -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_ITEMS_WITHIN_WEEK, data: [-1])
+    }
+
+    static func retrieveItemsForMonth() -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_ITEMS_WITHIN_MONTH, data: [-1])
+    }
+    
+    static func addFriend(friendID : Int) {
+        let result = execute(ADD_FRIEND, data: [-1, friendID])
+        if result > 0 {
+            print("failed to add friend")
+            return;
+        }
+    }
+    
+    static func retrieveFriends() -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_FRIENDS, data: [-1, -1])
+    }
+    
+    static func retrieveAllUsers() -> Array<Dictionary<String,protocol<>>>{
+        return query(GET_ALL_USERS)
+    }
+    
+    static func execute(query: String, data: Array<Any> = []) -> Int {
         let con = MySQL.Connection()
         do {
             try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
             try con.use(DB_NAME)
-            let select_stmt = try con.prepare(GET_ITEMS_WITHIN_WEEK)
-            let res = try select_stmt.query([])
-            let rows = try res.readAllRows()
-            print(rows)
+            let ins_stmt = try con.prepare(query)
+            try ins_stmt.exec(data)
+            return 0
         }
         catch (let e) {
             print(e)
+            return 1
         }
     }
-
-    static func retrieveItemsForMonth() {
+    
+    static func query(query: String, data: Array<Any> = []) -> Array<Dictionary<String,protocol<>>>{
         let con = MySQL.Connection();
         do {
             try con.open(DB_HOST, user: DB_USERNAME, passwd: DB_PASSWORD)
             try con.use(DB_NAME)
-            let select_stmt = try con.prepare(GET_ITEMS_WITHIN_MONTH)
+            let select_stmt = try con.prepare(query)
             let res = try select_stmt.query([])
             let rows = try res.readAllRows()
-            print(rows)
+            return rows![0]
         }
         catch (let e) {
             print(e)
+            return []
         }
     }
 }
