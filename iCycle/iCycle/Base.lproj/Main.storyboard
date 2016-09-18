@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GBG-Fu-b8a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GBG-Fu-b8a">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="OLe-Pf-Bop">
             <objects>
-                <viewController id="8zY-xj-K27" customClass="HomeViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="8zY-xj-K27" customClass="HomeViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wc0-Ld-uLv"/>
                         <viewControllerLayoutGuide type="bottom" id="T5p-S6-kNp"/>
@@ -217,7 +217,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="XQ3-7h-GIZ">
             <objects>
-                <tabBarController id="hrG-ZF-oo3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabViewController" id="hrG-ZF-oo3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Zxb-GA-AmV">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -265,7 +265,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FtH-EA-Tvt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FtH-EA-Tvt">
                                 <rect key="frame" x="20" y="58" width="560" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -330,10 +330,10 @@
             </objects>
             <point key="canvasLocation" x="-738" y="-1125"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="74m-Za-hZd">
             <objects>
-                <viewController id="GBG-Fu-b8a" sceneMemberID="viewController">
+                <viewController id="GBG-Fu-b8a" customClass="LoginViewController" customModule="iCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NUD-AN-a36"/>
                         <viewControllerLayoutGuide type="bottom" id="J5C-MM-0KS"/>
@@ -348,7 +348,7 @@
                                     <color key="titleColor" red="0.096107048809999998" green="0.5832583442" blue="0.1540232846" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hrG-ZF-oo3" kind="show" id="AwT-eJ-9GM"/>
+                                    <action selector="loginClick:" destination="GBG-Fu-b8a" eventType="touchUpInside" id="0dw-bW-xSn"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0i-yf-NDW">
@@ -389,6 +389,11 @@
                             <constraint firstItem="N4Z-Ec-dyY" firstAttribute="width" secondItem="N4Z-Ec-dyY" secondAttribute="height" multiplier="64:53" id="zwX-YL-DZS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="xQe-Eo-a6i" id="LDu-Er-h1D"/>
+                        <outlet property="PasswordText" destination="h8k-x9-cV3" id="AZl-NW-J2p"/>
+                        <outlet property="UsernameText" destination="V0i-yf-NDW" id="Dqc-og-PMX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cN-dR-2Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,7 +407,4 @@
         <image name="User Group Man Woman-30" width="30" height="30"/>
         <image name="logo" width="734" height="568"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="AwT-eJ-9GM"/>
-    </inferredMetricsTieBreakers>
 </document>
