@@ -38,8 +38,6 @@ class LoginViewController: UIViewController {
         let con = MySQL.Connection();
         let db_name = "iCycle";
         
-        print("\(username) \(password)");
-        
         do {
             try con.open("52.165.33.228", user: "root", passwd: "password");
             try con.use(db_name);
