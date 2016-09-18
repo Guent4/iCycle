@@ -20,6 +20,7 @@
 		84223A4E1D8DF0DD003F52F4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84223A4D1D8DF0DD003F52F4 /* FriendsViewController.swift */; };
 		84223A501D8DF118003F52F4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84223A4F1D8DF118003F52F4 /* SettingsViewController.swift */; };
 		84223A561D8E2C99003F52F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84223A551D8E2C99003F52F4 /* LoginViewController.swift */; };
+		84223A581D8E34B0003F52F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84223A571D8E34B0003F52F4 /* SignUpViewController.swift */; };
 		845A2CA61D8DEA9E0038BC14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A2CA51D8DEA9E0038BC14 /* HomeViewController.swift */; };
 		845A2CA81D8DEC7A0038BC14 /* ScannerViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A2CA71D8DEC7A0038BC14 /* ScannerViewController copy.swift */; };
 		C83AF2C087669D0C3253E7A5 /* Pods_iCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622BC28C07BE1AF123452290 /* Pods_iCycle.framework */; };
@@ -43,6 +44,7 @@
 		84223A4D1D8DF0DD003F52F4 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		84223A4F1D8DF118003F52F4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		84223A551D8E2C99003F52F4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84223A571D8E34B0003F52F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		845A2CA31D8DA5600038BC14 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		845A2CA51D8DEA9E0038BC14 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		845A2CA71D8DEC7A0038BC14 /* ScannerViewController copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScannerViewController copy.swift"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				845A2CA51D8DEA9E0038BC14 /* HomeViewController.swift */,
 				19FDCBF11D8E14FE000B6087 /* HistoryTableView.swift */,
 				845A2CA31D8DA5600038BC14 /* BridgingHeader.h */,
+				84223A571D8E34B0003F52F4 /* SignUpViewController.swift */,
 				6AF313561D8CC70A007BDB1E /* Main.storyboard */,
 				84223A551D8E2C99003F52F4 /* LoginViewController.swift */,
 				6AF313641D8CD4EB007BDB1E /* BarcodeReaderviewController.swift */,
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84223A581D8E34B0003F52F4 /* SignUpViewController.swift in Sources */,
 				19FDCBF21D8E14FE000B6087 /* HistoryTableView.swift in Sources */,
 				6AF313551D8CC70A007BDB1E /* ViewController.swift in Sources */,
 				6AF313651D8CD4EB007BDB1E /* BarcodeReaderviewController.swift in Sources */,
